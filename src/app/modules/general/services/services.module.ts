@@ -5,13 +5,15 @@ import {ServicesRoutingModule} from './services-routing.module';
 import {AboutModule} from "../about/about.module";
 import {ServicesComponent} from "./services.component";
 import {DecoratedAmbulanceRoutingModule} from "./decoratedAmbulance/decoratedAmbulance-routing.module";
+import {ArthiMatkiRoutingModule} from "./arthi_matki/arthiMatki-routing.module";
 
 @NgModule({
   imports: [
     CommonModule,
     ServicesRoutingModule,
     AboutModule,
-    DecoratedAmbulanceRoutingModule
+    DecoratedAmbulanceRoutingModule,
+    ArthiMatkiRoutingModule
   ],
   exports: [
     ServicesComponent

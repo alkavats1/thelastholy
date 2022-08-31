@@ -5,14 +5,16 @@ import {DecoratedAmbulanceRoutingModule, } from './decoratedAmbulance-routing.mo
 import {DecoratedAmbulanceComponent} from "./decoratedAmbulance.component";
 import {GalleryModule} from "../../gallery/gallery.module";
 import {AboutModule} from "../../about/about.module";
+import {HomeModule} from "../../home/home.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    DecoratedAmbulanceRoutingModule,
-    AboutModule,
-    GalleryModule,
-  ],
+    imports: [
+        CommonModule,
+        DecoratedAmbulanceRoutingModule,
+        AboutModule,
+        GalleryModule,
+        HomeModule,
+    ],
   exports: [
     DecoratedAmbulanceComponent
   ],

@@ -1,0 +1,67 @@
+name: Deploy Job
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Copying artifact to build
+        run: |
+          echo "started copying"
+          mkdir build
+          cp -v after_install ./build
+          cp -v appspec.yml ./build
+          pwd && ls -R ./build
+          zip ./build/build.zip ./build/appspec.yml ./build/after_install
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+      - name: Upload artifacts to s3
+        run: |
+          aws s3 cp ./build/build.zip s3://deployment-configuration-web/web-site/lastHoly-FE.zip 
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+      - name: Build, tag, and push image to Amazon ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: lastholy
+        run: |
+          # Build a docker container and push it to ECR
+          IMAGE_TAG=FElatest
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          echo "Pushing image to ECR..."
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+  
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:  
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+      - name: Deploy to Staging
+        run: |
+          aws deploy create-deployment \
+          --application-name stagingsites \
+          --deployment-configuration-webig-name CodeDeployDefault.OneAtATime \
+          --deployment-group-name thelastholy-web \
+          --description "The Last Holy-Web FE Deployment" \
+          --s3-location bucket=deployment-configuration-web,bundleType=zip,key=web-site/lastHoly-FE.zip 

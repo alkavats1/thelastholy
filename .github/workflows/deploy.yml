@@ -61,7 +61,7 @@ jobs:
         run: |
           aws deploy create-deployment \
           --application-name stagingsites \
-          --deployment-configuration-webig-name CodeDeployDefault.OneAtATime \
+          --deployment-config-name CodeDeployDefault.OneAtATime \
           --deployment-group-name thelastholy-web \
           --description "The Last Holy-Web FE Deployment" \
           --s3-location bucket=deployment-configuration-web,bundleType=zip,key=web-site/lastHoly-FE.zip 

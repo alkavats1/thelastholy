@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  FE:
+    container_name: lastholy-FE
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - /home/ubuntu/lastholidayweb/nginx/:/etc/nginx

@@ -6,6 +6,7 @@ import {DecoratedAmbulanceComponent} from "./decoratedAmbulance.component";
 import {GalleryModule} from "../../gallery/gallery.module";
 import {AboutModule} from "../../about/about.module";
 import {HomeModule} from "../../home/home.module";
+import {PackagesModule} from "../../packages/packages.module";
 
 @NgModule({
     imports: [
@@ -14,6 +15,7 @@ import {HomeModule} from "../../home/home.module";
         AboutModule,
         GalleryModule,
         HomeModule,
+        PackagesModule,
     ],
   exports: [
     DecoratedAmbulanceComponent

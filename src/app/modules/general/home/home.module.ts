@@ -5,14 +5,16 @@ import {HomeRoutingModule} from './home-routing.module';
 import {HomeComponent} from "./home.component";
 import {AboutModule} from "../about/about.module";
 import {PackagesModule} from "../packages/packages.module";
+import {ServicesModule} from "../services/services.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    AboutModule,
-    PackagesModule
-  ],
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        AboutModule,
+        PackagesModule,
+        ServicesModule
+    ],
   exports: [
     HomeComponent
   ],

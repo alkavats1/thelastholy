@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo rm /mnt/deploy/lastholidayweb/thelastholy/*
-docker-compose -f /home/ubuntu/thelastholy/docker-compose.yml stop && \
+docker-compose -f /home/ubuntu/lastholidayweb/thelastholy/docker-compose.yml stop && \
 aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 160698707044.dkr.ecr.ap-south-1.amazonaws.com && \
-docker-compose -f /home/ubuntu/thelastholy/docker-compose.yml pull && \
-docker-compose -f /home/ubuntu/thelastholy/docker-compose.yml up -d --force-recreate && \
+docker-compose -f /home/ubuntu/lastholidayweb/thelastholy/docker-compose.yml pull && \
+docker-compose -f /home/ubuntu/lastholidayweb/thelastholy/docker-compose.yml up -d --force-recreate && \
 sudo service nginx restart

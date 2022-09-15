@@ -6,6 +6,7 @@ import {HomeComponent} from "./home.component";
 import {AboutModule} from "../about/about.module";
 import {PackagesModule} from "../packages/packages.module";
 import {ServicesModule} from "../services/services.module";
+import {ContactModule} from "../contact/contact.module";
 
 @NgModule({
     imports: [
@@ -13,7 +14,8 @@ import {ServicesModule} from "../services/services.module";
         HomeRoutingModule,
         AboutModule,
         PackagesModule,
-        ServicesModule
+        ServicesModule,
+        ContactModule
     ],
   exports: [
     HomeComponent

@@ -24,6 +24,16 @@ const routes: Routes = [
       .then(mod => mod.DecoratedAmbulanceModule)
   },
   {
+    path: 'arthiMatki',
+    loadChildren: () => import('./modules/general/services/arthi_matki/arthiMatki.module')
+      .then(mod => mod.ArthiMatkiModule)
+  },
+  {
+    path: 'kafan',
+    loadChildren: () => import('./modules/general/services/kafan/kafan.module')
+      .then(mod => mod.KafanModule)
+  },
+  {
     path: 'packages',
     loadChildren: () => import('./modules/general/packages/packages.module')
       .then(mod => mod.PackagesModule)

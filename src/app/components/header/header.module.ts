@@ -3,15 +3,17 @@ import {CommonModule} from '@angular/common';
 
 import {HeaderRoutingModule} from './header-routing.module';
 import {HeaderComponent} from './header.component';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
     HeaderComponent
   ],
-  imports: [
-    CommonModule,
-    HeaderRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        HeaderRoutingModule,
+        MatButtonModule
+    ],
   exports: [
     HeaderComponent
   ],

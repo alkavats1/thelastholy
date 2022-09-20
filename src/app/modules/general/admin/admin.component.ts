@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
-import {ContactService} from "../contact/contact.service";
 import {Router} from "@angular/router";
 import {SupportResponseModel} from "../../../model/support-response.model";
 import {AppConstants} from "../../../app.constant";
-import {SupportRequest} from "../contact/support";
+import {SupportRequest} from "../../../shared/supportForm/support";
+import {ContactService} from "../../../shared/supportForm/contact.service";
 
 
 @Component({

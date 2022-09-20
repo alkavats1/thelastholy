@@ -1,7 +1,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
   <div class="container d-flex align-items-center justify-content-between">
     <a href="/home" class="logo d-flex align-items-center me-auto me-lg-0">
-      <img src="assets/img/logo-2.png">
+      <img src="https://i.postimg.cc/Rq5gsyKr/Screenshot-from-2022-09-20-23-50-57.png" class="img-fluid">
     </a>
     <nav  class="navbar">
       <ul>
@@ -10,8 +10,8 @@
         <li class="dropdown" href="/services">
           <a routerLink="/services"><span>Our Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
-            <li><a href="/services/decoratedAmbulance">Hearse Ambulance Service</a></li>
-            <li><a href="/services/arthiMatki">Arthi and Matki Service</a></li>
+            <li><a href="/decoratedAmbulance">Hearse Ambulance Service</a></li>
+            <li><a href="/arthiMatki">Arthi and Matki Service</a></li>
             <li><a href="/kafan">Kafan Funeral Service</a></li>
             <li><a href="/bookSlot">Cremation Ground Slot Booking ( Wooden )</a></li>
             <li><a href="">CREMATION GROUND CHARGES</a></li>
@@ -36,7 +36,13 @@
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn-book-a-table" href="tel:+918512000444">Helpline</a>&nbsp; <i
+    <div class="d-flex">
+      <a class="btn-book-a-table" href="tel:+918512000444">Helpline</a>&nbsp;
+      <span>
+        <button class="img-fluid" mat-raised-button (click)="openDialog()">Quick Enquiry</button>
+      </span>
+    </div>
+    <i
     class="mobile-nav-toggle mobile-nav-show bi bi-list"></i> <i
     class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
   </div>

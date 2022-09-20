@@ -4,6 +4,11 @@ import {HomeComponent} from "./modules/general/home/home.component";
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
     loadChildren: () => import('./modules/general/home/home.module')
       .then(mod => mod.HomeModule)
@@ -18,7 +23,6 @@ const routes: Routes = [
     loadChildren: () => import('./modules/general/services/services.module')
       .then(mod => mod.ServicesModule)
   },
-
   {
     path: 'packages',
     loadChildren: () => import('./modules/general/packages/packages.module')
@@ -44,7 +48,6 @@ const routes: Routes = [
     loadChildren: () => import('./modules/general/admin/admin.module')
       .then(mod => mod.AdminModule)
   },
-
 ];
 
 @NgModule({

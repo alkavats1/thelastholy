@@ -274,6 +274,7 @@ section {
 .header .logo img {
   max-height: 40px;
   margin-right: 6px;
+/*  max-width: 37px;*/
 }
 
 .header .logo h1 {
@@ -535,7 +536,7 @@ section {
 
   .mobile-nav-show {
     color: var(--color-secondary);
-    font-size: 28px;
+    font-size: 20px;
     cursor: pointer;
     line-height: 0;
     transition: 0.5s;
@@ -1128,7 +1129,6 @@ section {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: url(../img/team-shape.svg) no-repeat center bottom;
   background-size: contain;
   z-index: 1;
 }

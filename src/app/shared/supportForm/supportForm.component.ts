@@ -1,11 +1,11 @@
 import {Component, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
-import {SupportValidationMessages} from "../../modules/general/contact/support-validation-messages";
+import {SupportValidationMessages} from "./support-validation-messages";
 import {SupportResponseModel} from "../../model/support-response.model";
-import {ContactService} from "../../modules/general/contact/contact.service";
+import {ContactService} from "./contact.service";
 import {Router} from "@angular/router";
 import {AppConstants} from "../../app.constant";
-import {SupportRequest} from "../../modules/general/contact/support";
+import {SupportRequest} from "./support";
 
 @Component({
   selector: 'app-supportForm',

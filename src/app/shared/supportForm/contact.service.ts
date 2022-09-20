@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {SupportRequest} from "./support";
 import {Observable} from "rxjs";
-import {SupportResponseModel} from "../../../model/support-response.model";
-import {AppConstants} from "../../../app.constant";
+import {SupportResponseModel} from "../../model/support-response.model";
+import {AppConstants} from "../../app.constant";
 
 @Injectable({
   providedIn: 'root'

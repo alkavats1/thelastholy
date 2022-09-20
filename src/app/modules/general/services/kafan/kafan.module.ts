@@ -8,6 +8,7 @@ import {PackagesModule} from "../../packages/packages.module";
 import {ContactModule} from "../../contact/contact.module";
 import {KafanRoutingModule} from "./kafan-routing.module";
 import {KafanComponent} from "./kafan.component";
+import {SharedModule} from "../../../../shared/shared.module";
 
 @NgModule({
     imports: [
@@ -18,6 +19,7 @@ import {KafanComponent} from "./kafan.component";
         HomeModule,
         PackagesModule,
         ContactModule,
+        SharedModule,
     ],
   exports: [
     KafanComponent

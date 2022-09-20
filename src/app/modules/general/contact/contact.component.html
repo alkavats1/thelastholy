@@ -1,14 +1,3 @@
-<!--
-<div class="container py-5">
-  <p>contact works!</p>
-  <ul>
-    <li><a routerLink="/contact/mailing">Mailing</a></li>
-    <li><a routerLink="/contact/mapping">Mapping</a></li>
-    <li><a routerLink="/contact/website">Website</a></li>
-  </ul>
-  <h4>Child Routes Result</h4>
-  <router-outlet></router-outlet>
-</div>-->
 <br>
 <main id="main">
   <section class="contact" id="contact">
@@ -25,101 +14,7 @@
             <a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe>
         </div>
       </div>
-      <div class="row gy-4">
-        <div class="col-md-6">
-          <div class="info-item d-flex align-items-center">
-            <i class="icon bi bi-map flex-shrink-0"></i>
-            <div>
-              <h3>Our Address</h3>
-              <p>Ghazipur Shamshan Ghat</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="info-item d-flex align-items-center">
-            <i class="icon bi bi-envelope flex-shrink-0"></i>
-            <div>
-              <h3>Email Us</h3>
-              <p><a href="mailto: thelastholyjourney@gmail.com">thelastholyjourney@gmail.com</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="info-item d-flex align-items-center">
-            <i class="icon bi bi-telephone flex-shrink-0"></i>
-            <div>
-              <h3>Call Us</h3>
-              <p href="tel:+918512000444">+91 8512000444</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="info-item d-flex align-items-center">
-            <i class="icon bi bi-share flex-shrink-0"></i>
-            <div>
-              <h3>Opening Hours</h3>
-              <div><strong>Mon-Sun:</strong> 11AM - 11PM;</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <form (ngSubmit)="onSubmit()" [formGroup]="supportForm" class="php-email-form p-3 p-md-4" method="post"
-            role="form">
-        <div class="row">
-          <div class="col-xl-6 form-group"><input class="form-control" id="name" placeholder="Your Name"
-                                                  formControlName="name"  type="text">
-            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.name">
-              <ng-container
-                *ngIf="supportForm.controls['name'].hasError(validation.type) && supportForm.controls['name'].touched"
-                class="error-message">
-                {{validation.message}}
-              </ng-container>
-            </mat-error>
-          </div>
-          <div class="col-xl-6 form-group"><input class="form-control" id="email" placeholder="Your Email"
-                                                  formControlName="email" type="email">
-            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.email">
-              <ng-container *ngIf="supportForm.controls['email'].hasError(validation.type) && supportForm.controls['email'].touched"
-                            class="error-message">
-                {{validation.message}}
-              </ng-container>
-            </mat-error>
-          </div>
-        </div>
-        <div class="form-group"><input class="form-control" id="phone" placeholder="Phone"
-                                       formControlName="phone" type="number">
-          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.phone">
-            <ng-container
-              *ngIf="supportForm.controls['phone'].hasError(validation.type) && supportForm.controls['phone'].touched"
-              class="error-message">
-              {{validation.message}}
-            </ng-container>
-          </mat-error>
-        </div>
-        <div class="form-group"><textarea class="form-control" placeholder="Message"
-                                          formControlName="message"  rows="5"></textarea>
-          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.message">
-            <ng-container
-              *ngIf="supportForm.controls['message'].hasError(validation.type) && supportForm.controls['message'].touched"
-              class="error-message">
-              {{validation.message}}
-            </ng-container>
-          </mat-error>
-        </div>
-        <div class="form-group"><input class="form-control" placeholder="Subject"
-                                          formControlName="subject" rows="5">
-          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.subject">
-            <ng-container
-              *ngIf="supportForm.controls['subject'].hasError(validation.type) && supportForm.controls['subject'].touched"
-              class="error-message">
-              {{validation.message}}
-            </ng-container>
-          </mat-error>
-        </div>
-        <div class="text-center">
-          <button type="submit">Send Message</button>
-        </div>
-      </form>
+      <app-supportForm></app-supportForm>
     </div>
   </section>
 </main>

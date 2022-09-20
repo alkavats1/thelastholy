@@ -18,21 +18,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/general/services/services.module')
       .then(mod => mod.ServicesModule)
   },
-  {
-    path: 'decoratedAmbulance',
-    loadChildren: () => import('./modules/general/services/decoratedAmbulance/decoratedAmbulance.module')
-      .then(mod => mod.DecoratedAmbulanceModule)
-  },
-  {
-    path: 'arthiMatki',
-    loadChildren: () => import('./modules/general/services/arthi_matki/arthiMatki.module')
-      .then(mod => mod.ArthiMatkiModule)
-  },
-  {
-    path: 'kafan',
-    loadChildren: () => import('./modules/general/services/kafan/kafan.module')
-      .then(mod => mod.KafanModule)
-  },
+
   {
     path: 'packages',
     loadChildren: () => import('./modules/general/packages/packages.module')
@@ -54,10 +40,10 @@ const routes: Routes = [
       .then(mod => mod.BookSlotModule)
   },
   {
-    path: '**',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  }
+    path: 'admin',
+    loadChildren: () => import('./modules/general/admin/admin.module')
+      .then(mod => mod.AdminModule)
+  },
 
 ];
 

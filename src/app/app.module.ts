@@ -7,6 +7,10 @@ import {FooterModule} from "./components/footer/footer.module";
 import {AboutModule} from "./modules/general/about/about.module";
 import {HomeModule} from "./modules/general/home/home.module";
 import {ServicesModule} from "./modules/general/services/services.module";
+import {HttpClientModule} from "@angular/common/http";
+import {MaterialModule} from "./shared/material.module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,12 +18,16 @@ import {ServicesModule} from "./modules/general/services/services.module";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HeaderModule,
     FooterModule,
     HomeModule,
     AboutModule,
-    ServicesModule
+    ServicesModule,
+    HttpClientModule,
+    MaterialModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

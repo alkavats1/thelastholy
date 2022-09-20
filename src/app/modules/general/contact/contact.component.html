@@ -63,21 +63,58 @@
           </div>
         </div>
       </div>
-      <form action="#" class="php-email-form p-3 p-md-4" method="post" role="form" style="background-image: url('https://i.postimg.cc/3x9zhyVQ/form-bg.jpg')">
+      <form (ngSubmit)="onSubmit()" [formGroup]="supportForm" class="php-email-form p-3 p-md-4" method="post"
+            role="form">
         <div class="row">
-          <div class="col-xl-6 form-group"><input class="form-control" id="name" name="name" placeholder="Your Name"
-                                                  required type="text"></div>
-          <div class="col-xl-6 form-group"><input class="form-control" id="email" name="email" placeholder="Your Email"
-                                                  required type="email"></div>
+          <div class="col-xl-6 form-group"><input class="form-control" id="name" placeholder="Your Name"
+                                                  formControlName="name"  type="text">
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.name">
+              <ng-container
+                *ngIf="supportForm.controls['name'].hasError(validation.type) && supportForm.controls['name'].touched"
+                class="error-message">
+                {{validation.message}}
+              </ng-container>
+            </mat-error>
+          </div>
+          <div class="col-xl-6 form-group"><input class="form-control" id="email" placeholder="Your Email"
+                                                  formControlName="email" type="email">
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.email">
+              <ng-container *ngIf="supportForm.controls['email'].hasError(validation.type) && supportForm.controls['email'].touched"
+                            class="error-message">
+                {{validation.message}}
+              </ng-container>
+            </mat-error>
+          </div>
         </div>
-        <div class="form-group"><input class="form-control" id="subject" name="subject" placeholder="Subject"
-                                       required type="text"></div>
-        <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" required
-                                          rows="5"></textarea></div>
-        <div class="my-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
+        <div class="form-group"><input class="form-control" id="phone" placeholder="Phone"
+                                       formControlName="phone" type="number">
+          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.phone">
+            <ng-container
+              *ngIf="supportForm.controls['phone'].hasError(validation.type) && supportForm.controls['phone'].touched"
+              class="error-message">
+              {{validation.message}}
+            </ng-container>
+          </mat-error>
+        </div>
+        <div class="form-group"><textarea class="form-control" placeholder="Message"
+                                          formControlName="message"  rows="5"></textarea>
+          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.message">
+            <ng-container
+              *ngIf="supportForm.controls['message'].hasError(validation.type) && supportForm.controls['message'].touched"
+              class="error-message">
+              {{validation.message}}
+            </ng-container>
+          </mat-error>
+        </div>
+        <div class="form-group"><input class="form-control" placeholder="Subject"
+                                          formControlName="subject" rows="5">
+          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.subject">
+            <ng-container
+              *ngIf="supportForm.controls['subject'].hasError(validation.type) && supportForm.controls['subject'].touched"
+              class="error-message">
+              {{validation.message}}
+            </ng-container>
+          </mat-error>
         </div>
         <div class="text-center">
           <button type="submit">Send Message</button>

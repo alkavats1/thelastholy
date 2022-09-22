@@ -5,12 +5,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MaterialModule} from "./material.module";
 import {SupportFormComponent} from "./supportForm/supportForm.component";
 import {DialogBoxComponent} from "./dialog-box/dialogBox.component";
+import {ToastrModule} from "ngx-toastr";
+import {EnquiryFormComponent} from "./enquiryForm/enquiryForm.component";
 
 
 @NgModule({
   declarations: [
     SupportFormComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    EnquiryFormComponent
 
   ],
   exports: [
@@ -23,6 +26,7 @@ import {DialogBoxComponent} from "./dialog-box/dialogBox.component";
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
+    ToastrModule.forRoot(),
   ],
 })
 export class SharedModule {

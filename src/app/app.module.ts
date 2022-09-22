@@ -11,6 +11,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MaterialModule} from "./shared/material.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ReactiveFormsModule} from "@angular/forms";
+import {SharedService} from "./shared/shared.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

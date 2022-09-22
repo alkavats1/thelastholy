@@ -4,7 +4,7 @@ import {Router} from "@angular/router";
 import {SupportResponseModel} from "../../../model/support-response.model";
 import {AppConstants} from "../../../app.constant";
 import {SupportRequest} from "../../../shared/supportForm/support";
-import {ContactService} from "../../../shared/supportForm/contact.service";
+import {SharedService} from "../../../shared/shared.service";
 
 
 @Component({
@@ -18,7 +18,7 @@ export class AdminComponent implements OnInit {
   tableData! : SupportRequest[];
   dataSource = new MatTableDataSource();
 
-  constructor(private supportService: ContactService, private router: Router ) {
+  constructor(private supportService: SharedService, private router: Router ) {
   }
 
   ngOnInit(): void {

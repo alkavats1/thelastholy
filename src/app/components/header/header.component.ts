@@ -15,13 +15,11 @@ export class HeaderComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogBoxComponent, {
-      width: '900px',
-      data: {name: this.name, animal: this.animal},
+      width: '700px',
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
     });
   }
 

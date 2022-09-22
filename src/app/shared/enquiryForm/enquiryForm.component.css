@@ -1,0 +1,99 @@
+.contact .enquiryForm {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact .enquiryForm .form-group {
+  padding-bottom: 20px;
+}
+
+.contact .enquiryForm .error-message {
+  display: none;
+  color: #fff;
+  background: #df1529;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .enquiryForm .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .enquiryForm .sent-message {
+  display: none;
+  color: #fff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .enquiryForm .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .enquiryForm .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #059652;
+  border-top-color: #fff;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .enquiryForm input,
+.contact .enquiryForm textarea {
+  border-color: #000;;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .enquiryForm input:focus,
+.contact .enquiryForm textarea:focus {
+  /*border-color: var(--color-primary);*/
+}
+
+.contact .enquiryForm input {
+  height: 48px;
+}
+
+.contact .enquiryForm textarea {
+  padding: 10px 12px;
+}
+
+.contact .enquiryForm button[type=submit] {
+  background: var(--color-primary);
+  border: 0;
+  padding: 12px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .enquiryForm mat-error{
+  color: white;
+}
+
+.contact .enquiryForm button[type=submit]:hover {
+  background: #ec2727;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

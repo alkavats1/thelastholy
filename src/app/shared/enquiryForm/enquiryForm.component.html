@@ -2,8 +2,8 @@
 <main id="main">
   <div class="contact" id="contact">
     <div class="container" data-aos="fade-up">
-      <form (ngSubmit)="onSubmit()" [formGroup]="supportForm" class="php-email-form p-3 p-md-4" method="post"
-            role="form" style="background-color: #f8d7da">
+      <form (ngSubmit)="onSubmit()" [formGroup]="supportForm" class="enquiryForm p-3 p-md-4" method="post"
+            role="form">
         <div class="row">
           <div class="col-xl-6 form-group"><input class="form-control" id="name" placeholder="Your Name"
                                                   formControlName="name"  type="text">
@@ -26,26 +26,26 @@
           </div>
         </div>
         <div class="row">
-        <div class="col-xl-6 form-group"><input class="form-control" id="phone" placeholder="Phone"
-                                       formControlName="phone" type="number">
-          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.phone">
-            <ng-container
-              *ngIf="supportForm.controls['phone'].hasError(validation.type) && supportForm.controls['phone'].touched"
-              class="error-message">
-              {{validation.message}}
-            </ng-container>
-          </mat-error>
-        </div>
-        <div class="col-xl-6 form-group"><input class="form-control" placeholder="Subject"
-                                       formControlName="subject">
-          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.subject">
-            <ng-container
-              *ngIf="supportForm.controls['subject'].hasError(validation.type) && supportForm.controls['subject'].touched"
-              class="error-message">
-              {{validation.message}}
-            </ng-container>
-          </mat-error>
-        </div>
+          <div class="col-xl-6 form-group"><input class="form-control" id="phone" placeholder="Phone"
+                                                  formControlName="phone" type="number">
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.phone">
+              <ng-container
+                *ngIf="supportForm.controls['phone'].hasError(validation.type) && supportForm.controls['phone'].touched"
+                class="error-message">
+                {{validation.message}}
+              </ng-container>
+            </mat-error>
+          </div>
+          <div class="col-xl-6 form-group"><input class="form-control" placeholder="Subject"
+                                                  formControlName="subject">
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.subject">
+              <ng-container
+                *ngIf="supportForm.controls['subject'].hasError(validation.type) && supportForm.controls['subject'].touched"
+                class="error-message">
+                {{validation.message}}
+              </ng-container>
+            </mat-error>
+          </div>
         </div>
         <div class="form-group"><textarea class="form-control" placeholder="Message"
                                           formControlName="message"  rows="5"></textarea>

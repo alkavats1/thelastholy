@@ -1,20 +1,19 @@
 import {Component, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
-import {SupportValidationMessages} from "./support-validation-messages";
+import {SupportValidationMessages} from "./enquiry-validation-messages";
 import {SupportResponseModel} from "../../model/support-response.model";
-
 import {Router} from "@angular/router";
 import {AppConstants} from "../../app.constant";
-import {SupportRequest} from "./support";
+import {SupportRequest} from "./enquiry";
 import {ToastrService} from "ngx-toastr";
 import {SharedService} from "../shared.service";
 
 @Component({
-  selector: 'app-supportForm',
-  templateUrl: './supportForm.component.html',
-  styleUrls: ['./supportForm.component.css']
+  selector: 'app-enquiryForm',
+  templateUrl: './enquiryForm.component.html',
+  styleUrls: ['./enquiryForm.component.css']
 })
-export class SupportFormComponent {
+export class EnquiryFormComponent {
 
   supportForm: FormGroup;
   supportValidationMessages = SupportValidationMessages;

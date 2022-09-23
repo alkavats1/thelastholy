@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import { KafanComponent} from "./kafan.component";
+import {KafanComponent} from "./kafan.component";
 
 
 const routes: Routes = [

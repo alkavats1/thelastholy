@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {NotFoundComponent} from './not-found.component';
+import {WhyChooseUsComponent} from './chitaAsthal.component';
 
-describe('NotFoundComponent', () => {
-  let component: NotFoundComponent;
-  let fixture: ComponentFixture<NotFoundComponent>;
+describe('AboutComponent', () => {
+  let component: WhyChooseUsComponent;
+  let fixture: ComponentFixture<WhyChooseUsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NotFoundComponent]
+      declarations: [WhyChooseUsComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NotFoundComponent);
+    fixture = TestBed.createComponent(WhyChooseUsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

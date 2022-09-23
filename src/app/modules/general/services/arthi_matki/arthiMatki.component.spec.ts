@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {ArthiMatkiComponent} from "./arthiMatki.component";
 
-import {WhyChooseUsComponent} from './arthiMatki.component';
 
 describe('AboutComponent', () => {
-  let component: WhyChooseUsComponent;
-  let fixture: ComponentFixture<WhyChooseUsComponent>;
+  let component: ArthiMatkiComponent;
+  let fixture: ComponentFixture<ArthiMatkiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [WhyChooseUsComponent]
+      declarations: [ArthiMatkiComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WhyChooseUsComponent);
+    fixture = TestBed.createComponent(ArthiMatkiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

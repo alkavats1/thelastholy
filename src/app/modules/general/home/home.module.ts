@@ -9,14 +9,14 @@ import {ServicesModule} from "../services/services.module";
 import {ContactModule} from "../contact/contact.module";
 
 @NgModule({
-    imports: [
-        CommonModule,
-        HomeRoutingModule,
-        AboutModule,
-        PackagesModule,
-        ServicesModule,
-        ContactModule
-    ],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    AboutModule,
+    PackagesModule,
+    ServicesModule,
+    ContactModule
+  ],
   exports: [
     HomeComponent
   ],

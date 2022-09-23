@@ -5,6 +5,7 @@ import {GalleryModule} from "../../gallery/gallery.module";
 import {AboutModule} from "../../about/about.module";
 import {ArthiMatkiRoutingModule} from "./arthiMatki-routing.module";
 import {ArthiMatkiComponent} from "./arthiMatki.component";
+import {SharedModule} from "../../../../shared/shared.module";
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import {ArthiMatkiComponent} from "./arthiMatki.component";
     ArthiMatkiRoutingModule,
     AboutModule,
     GalleryModule,
+    SharedModule,
   ],
   exports: [
     ArthiMatkiComponent

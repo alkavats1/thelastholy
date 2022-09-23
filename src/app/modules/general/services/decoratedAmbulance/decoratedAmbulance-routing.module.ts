@@ -4,7 +4,11 @@ import {DecoratedAmbulanceComponent} from "./decoratedAmbulance.component";
 
 
 const routes: Routes = [
-  {path: '', component: DecoratedAmbulanceComponent},
+  {path: '', component: DecoratedAmbulanceComponent, pathMatch: "full"},
+  {
+    path: '**',
+    redirectTo: '/home',
+  }
 ];
 
 @NgModule({

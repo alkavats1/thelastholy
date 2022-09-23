@@ -7,6 +7,9 @@ import {ServicesComponent} from "./services.component";
 import {DecoratedAmbulanceRoutingModule} from "./decoratedAmbulance/decoratedAmbulance-routing.module";
 import {ArthiMatkiRoutingModule} from "./arthi_matki/arthiMatki-routing.module";
 import {PackagesModule} from "../packages/packages.module";
+import {BookSlotModule} from "./bookSlot/bookSlot.module";
+import {ChitaAsthalModule} from "./chitaAsthal/chitaAsthal.module";
+import {VishramAsthalModule} from "./vishramAsthal/vishramAsthal.module";
 
 @NgModule({
   imports: [
@@ -15,7 +18,10 @@ import {PackagesModule} from "../packages/packages.module";
     AboutModule,
     DecoratedAmbulanceRoutingModule,
     ArthiMatkiRoutingModule,
-    PackagesModule
+    PackagesModule,
+    BookSlotModule,
+    ChitaAsthalModule,
+    VishramAsthalModule
   ],
   exports: [
     ServicesComponent,

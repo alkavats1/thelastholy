@@ -1,6 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {Router} from "@angular/router";
+
 export interface DialogData {
   animal: string;
   name: string;
@@ -11,13 +11,14 @@ export interface DialogData {
   templateUrl: './dialogBox.component.html',
   styleUrls: ['./dialogBox.component.css']
 })
-export class DialogBoxComponent  {
+export class DialogBoxComponent {
   message!: string;
 
   constructor(
     public dialogRef: MatDialogRef<DialogBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
-  ) {}
+  ) {
+  }
 
   onNoClick(): void {
     this.dialogRef.close();

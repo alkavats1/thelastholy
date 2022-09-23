@@ -1,15 +1,16 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {KafanComponent} from "./kafan.component";
+import {CremationGroundComponent} from "./cremationGround.component";
+
 
 
 const routes: Routes = [
-  {path: '', component: KafanComponent},
+  {path: '', component: CremationGroundComponent, pathMatch: "full"},
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class KafanRoutingModule {
+export class CremationGroundRoutingModule {
 }

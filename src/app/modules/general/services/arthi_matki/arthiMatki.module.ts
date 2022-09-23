@@ -8,13 +8,13 @@ import {ArthiMatkiComponent} from "./arthiMatki.component";
 import {SharedModule} from "../../../../shared/shared.module";
 
 @NgModule({
-    imports: [
-        CommonModule,
-        ArthiMatkiRoutingModule,
-        AboutModule,
-        GalleryModule,
-        SharedModule,
-    ],
+  imports: [
+    CommonModule,
+    ArthiMatkiRoutingModule,
+    AboutModule,
+    GalleryModule,
+    SharedModule,
+  ],
   exports: [
     ArthiMatkiComponent
   ],

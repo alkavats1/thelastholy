@@ -17,7 +17,7 @@
   font-weight: 600;
 }
 
-.contact .enquiryForm .error-message br+br {
+.contact .enquiryForm .error-message br + br {
   margin-top: 25px;
 }
 
@@ -52,10 +52,10 @@
 
 .contact .enquiryForm input,
 .contact .enquiryForm textarea {
-  border-color: #000;;
-  border-radius: 0;
   box-shadow: none;
   font-size: 14px;
+  border: 2px solid black;
+  border-radius: 9px;
 }
 
 .contact .enquiryForm input:focus,
@@ -65,6 +65,8 @@
 
 .contact .enquiryForm input {
   height: 48px;
+  border: 2px solid black;
+  border-radius: 9px;
 }
 
 .contact .enquiryForm textarea {
@@ -80,7 +82,7 @@
   border-radius: 50px;
 }
 
-.contact .enquiryForm mat-error{
+.contact .enquiryForm mat-error {
   color: white;
 }
 

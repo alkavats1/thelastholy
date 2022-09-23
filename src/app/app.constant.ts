@@ -68,7 +68,6 @@ export class AppConstants {
   };
 
 
-
   public static readonly usa = 'US';
   public static readonly addressComponents = 'address_components';
   public static readonly formattedAddress = 'formatted_address';
@@ -105,51 +104,51 @@ export class AppConstants {
   public static readonly pathToS3GameUrlsJsonFile = 'https://3tl-json-data.s3.us-west-2.amazonaws.com/' +
     'portals/universal-portal/redirect-urls.json';
   public static readonly localStorageKeyForGameJwtToken = 'jwtTokenForGameRedirect';
- /* public static readonly rewardPageSlider : PageSingleSlide[] = [
-    {
-      desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/minions-the_rise_of_gru_earn_points_banner_1920x600.jpg",
-      mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/minions-the_rise_of_gru_earn_points_banner_1000x1000.jpg",
-      link: "/rewards"
-    },
-    {
-      desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/mrs_harris_goes_to_paris_earn_points_banner_1920x600.jpg",
-      mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/mrs_harris_goes_to_paris_earn_points_banner_1000x1000.jpg",
-      link: "/rewards"
-    },
-    {
-      desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/black-phone_earn_points_banner_1920x600_v1a.jpg",
-      mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/black-phone_earn_points_banner_1000x1000.jpg",
-      link: "/rewards"
-    },
-  ];
-  public static readonly homePageSliderLoggedIn : PageSingleSlide[] = [
-    {
-      desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/minions-the_rise_of_gru_earn_points_banner_1920x600.jpg",
-      mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/minions-the_rise_of_gru_earn_points_banner_1000x1000.jpg",
-      link: "/home"
-    },
-    {
-      desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/mrs_harris_goes_to_paris_earn_points_banner_1920x600.jpg",
-      mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/mrs_harris_goes_to_paris_earn_points_banner_1000x1000.jpg",
-      link: "/home"
-    },
-    {
-      desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/nope_earn_points_banner_1920x600.jpg",
-      mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/nope_earn_points_banner_1000x1000.jpg",
-      link: "/home"
-    },
-    {
-      desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/bad-guys_earn_points_banner_1920x600.jpg",
-      mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/bad-guys_earn_points_banner_1000x1000.jpg",
-      link: "/home"
-    }
-  ];
+  /* public static readonly rewardPageSlider : PageSingleSlide[] = [
+     {
+       desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/minions-the_rise_of_gru_earn_points_banner_1920x600.jpg",
+       mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/minions-the_rise_of_gru_earn_points_banner_1000x1000.jpg",
+       link: "/rewards"
+     },
+     {
+       desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/mrs_harris_goes_to_paris_earn_points_banner_1920x600.jpg",
+       mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/mrs_harris_goes_to_paris_earn_points_banner_1000x1000.jpg",
+       link: "/rewards"
+     },
+     {
+       desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/black-phone_earn_points_banner_1920x600_v1a.jpg",
+       mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/black-phone_earn_points_banner_1000x1000.jpg",
+       link: "/rewards"
+     },
+   ];
+   public static readonly homePageSliderLoggedIn : PageSingleSlide[] = [
+     {
+       desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/minions-the_rise_of_gru_earn_points_banner_1920x600.jpg",
+       mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/minions-the_rise_of_gru_earn_points_banner_1000x1000.jpg",
+       link: "/home"
+     },
+     {
+       desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/mrs_harris_goes_to_paris_earn_points_banner_1920x600.jpg",
+       mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/mrs_harris_goes_to_paris_earn_points_banner_1000x1000.jpg",
+       link: "/home"
+     },
+     {
+       desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/nope_earn_points_banner_1920x600.jpg",
+       mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/nope_earn_points_banner_1000x1000.jpg",
+       link: "/home"
+     },
+     {
+       desktop: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/bad-guys_earn_points_banner_1920x600.jpg",
+       mobile: "https://platform3-portalv3-production.s3.us-west-2.amazonaws.com/uniallaccess/bannerimages/bad-guys_earn_points_banner_1000x1000.jpg",
+       link: "/home"
+     }
+   ];
 
-  public static readonly homePageSliderNonLoggedIn : PageSingleSlide[] = [
-    {
-      desktop: "https://i.postimg.cc/tgvdt8Px/main-banner.webp",
-      mobile: "https://i.postimg.cc/tgvdt8Px/main-banner.webp",
-      link: "/home"
-    },
-  ];*/
+   public static readonly homePageSliderNonLoggedIn : PageSingleSlide[] = [
+     {
+       desktop: "https://i.postimg.cc/tgvdt8Px/main-banner.webp",
+       mobile: "https://i.postimg.cc/tgvdt8Px/main-banner.webp",
+       link: "/home"
+     },
+   ];*/
 }

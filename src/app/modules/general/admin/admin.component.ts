@@ -15,10 +15,11 @@ import {SharedService} from "../../../shared/shared.service";
 
 export class AdminComponent implements OnInit {
 
-  tableData! : SupportRequest[];
+  tableData!: SupportRequest[];
   dataSource = new MatTableDataSource();
+  displayedColumns: string[] = ['name', 'email', 'phone', 'message', 'subject'];
 
-  constructor(private supportService: SharedService, private router: Router ) {
+  constructor(private supportService: SharedService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -27,7 +28,7 @@ export class AdminComponent implements OnInit {
 
   }
 
-  getData(){
+  getData() {
     this.supportService.getSupportData().subscribe((response: SupportResponseModel) => {
       console.log(response.response);
       this.tableData = response.response;
@@ -37,7 +38,6 @@ export class AdminComponent implements OnInit {
     });
 
   }
-  displayedColumns: string[] = ['name', 'email', 'phone','message', 'subject'];
 
 }
 

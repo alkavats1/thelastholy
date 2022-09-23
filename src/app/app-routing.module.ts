@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from "./modules/general/home/home.component";
 
 const routes: Routes = [
   {
@@ -37,11 +36,6 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => import('./modules/general/contact/contact.module')
       .then(mod => mod.ContactModule)
-  },
-  {
-    path: 'bookSlot',
-    loadChildren: () => import('./modules/general/bookSlot/bookSlot.module')
-      .then(mod => mod.BookSlotModule)
   },
   {
     path: 'admin',

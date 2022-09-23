@@ -9,14 +9,14 @@ import {MatInputModule} from "@angular/material/input";
 import {SharedModule} from "../../../shared/shared.module";
 
 @NgModule({
-    imports: [
-        CommonModule,
-        ContactRoutingModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        SharedModule
-    ],
+  imports: [
+    CommonModule,
+    ContactRoutingModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    SharedModule
+  ],
   exports: [
     ContactComponent
   ],

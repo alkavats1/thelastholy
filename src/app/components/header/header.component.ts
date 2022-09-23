@@ -11,7 +11,8 @@ export class HeaderComponent {
   animal!: string;
   name!: string;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogBoxComponent, {

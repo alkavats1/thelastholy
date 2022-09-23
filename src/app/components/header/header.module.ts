@@ -9,11 +9,11 @@ import {MatButtonModule} from "@angular/material/button";
   declarations: [
     HeaderComponent
   ],
-    imports: [
-        CommonModule,
-        HeaderRoutingModule,
-        MatButtonModule
-    ],
+  imports: [
+    CommonModule,
+    HeaderRoutingModule,
+    MatButtonModule
+  ],
   exports: [
     HeaderComponent
   ],

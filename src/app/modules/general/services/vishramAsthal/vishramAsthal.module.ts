@@ -1,30 +1,28 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {CremationGroundComponent} from "./cremationGround.component";
+import { VishramAsthalComponent} from "./vishramAsthal.component";
 import {AboutModule} from "../../about/about.module";
-import {PackagesModule} from "../../packages/packages.module";
 import {SharedModule} from "../../../../shared/shared.module";
-import {ArthiMatkiRoutingModule} from "../arthi_matki/arthiMatki-routing.module";
 import {GalleryModule} from "../../gallery/gallery.module";
-import {CremationGroundRoutingModule} from "./cremationGround-routing.module";
+import { VishramAsthalRoutingModule} from "./vishramAsthal-routing.module";
 
 @NgModule({
   imports: [
     CommonModule,
-    CremationGroundRoutingModule,
+    VishramAsthalRoutingModule,
     AboutModule,
     GalleryModule,
     SharedModule,
 
   ],
   exports: [
-    CremationGroundComponent
+    VishramAsthalComponent
   ],
   declarations: [
-    CremationGroundComponent
+    VishramAsthalComponent
   ],
   providers: [],
 })
-export class CremationGroundModule {
+export class VishramAsthalModule {
 }

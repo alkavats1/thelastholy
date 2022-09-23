@@ -1,6 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {WhyChooseUsComponent} from './cremationGround.component';
+import {WhyChooseUsComponent} from './chitaAsthal.component';
 
 describe('AboutComponent', () => {
   let component: WhyChooseUsComponent;

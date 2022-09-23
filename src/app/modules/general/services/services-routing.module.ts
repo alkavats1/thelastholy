@@ -21,9 +21,14 @@ const routes: Routes = [
       .then(mod => mod.KafanModule)
   },
   {
-    path: 'cremationGround',
-    loadChildren: () => import('./cremationGround/cremationGround.module')
-      .then(mod => mod.CremationGroundModule)
+    path: 'chitaAsthal',
+    loadChildren: () => import('./chitaAsthal/chitaAsthal.module')
+      .then(mod => mod.ChitaAsthalModule)
+  },
+  {
+    path: 'vishramAsthal',
+    loadChildren: () => import('./vishramAsthal/vishramAsthal.module')
+      .then(mod => mod.VishramAsthalModule)
   },
   {
     path: 'cremationGroundBooking',

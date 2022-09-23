@@ -16,7 +16,6 @@ import {SharedModule} from "../../../../shared/shared.module";
     KafanRoutingModule,
     AboutModule,
     GalleryModule,
-    HomeModule,
     PackagesModule,
     ContactModule,
     SharedModule,

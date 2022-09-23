@@ -8,7 +8,8 @@ import {DecoratedAmbulanceRoutingModule} from "./decoratedAmbulance/decoratedAmb
 import {ArthiMatkiRoutingModule} from "./arthi_matki/arthiMatki-routing.module";
 import {PackagesModule} from "../packages/packages.module";
 import {BookSlotModule} from "./bookSlot/bookSlot.module";
-import {CremationGroundModule} from "./cremationGround/cremationGround.module";
+import {ChitaAsthalModule} from "./chitaAsthal/chitaAsthal.module";
+import {VishramAsthalModule} from "./vishramAsthal/vishramAsthal.module";
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {CremationGroundModule} from "./cremationGround/cremationGround.module";
     ArthiMatkiRoutingModule,
     PackagesModule,
     BookSlotModule,
-    CremationGroundModule
+    ChitaAsthalModule,
+    VishramAsthalModule
   ],
   exports: [
     ServicesComponent,

@@ -18,7 +18,6 @@ import {SharedModule} from "../../../../shared/shared.module";
     DecoratedAmbulanceRoutingModule,
     AboutModule,
     GalleryModule,
-    HomeModule,
     PackagesModule,
     ContactModule,
     ReactiveFormsModule,

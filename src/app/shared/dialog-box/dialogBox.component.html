@@ -1,14 +1,14 @@
-<div>
-  <div class="contact" id="contact">
-    <div class="container" data-aos="fade-up">
-      <div class="section-header" style="background-color: orange">
-        <p> Quick Enquiry Form <span>Send Us Your Query  <mat-icon (click)="onNoClick()" style="float: right; margin-right: -29px;
-    margin-top: -22px;">cancel</mat-icon></span></p>
-      </div>
-      <app-enquiryForm></app-enquiryForm>
-    </div>
+<header>
+  <div style="background-color: orange">
+    <h1 class="text-center">Enquiry Form <span> <mat-icon (click)="onNoClick()" style="float: right;">cancel</mat-icon></span></h1>
+    <p class="text-center">Need Help? <span>Send Us your queries</span></p>
   </div>
+
+</header>
+<div mat-dialog-content style="overflow: hidden">
+      <app-enquiryForm></app-enquiryForm>
 </div>
+
 <!--<div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
   <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>

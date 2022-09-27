@@ -16,7 +16,11 @@ export class HeaderComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogBoxComponent, {
-      width: '700px',
+      autoFocus: false,
+      maxWidth: '1000px',
+      maxHeight: '1000px',
+      disableClose: false,
+      panelClass: 'align-item-center'
     });
 
     dialogRef.afterClosed().subscribe(result => {

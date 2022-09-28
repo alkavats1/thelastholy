@@ -1,15 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {VishramAsthalComponent} from "./vishramAsthal.component";
+import {AsthiVisarjanComponent} from "./asthiVisarjan.component";
 
 
 const routes: Routes = [
-  {path: '', component: VishramAsthalComponent, pathMatch: "full"},
+  {path: '', component: AsthiVisarjanComponent, pathMatch: "full"},
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class VishramAsthalRoutingModule {
+export class AsthiVisarjanRoutingModule {
 }

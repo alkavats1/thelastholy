@@ -1,28 +1,28 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {VishramAsthalComponent} from "./vishramAsthal.component";
+import {FreezerBoxComponent} from "./freezerBox.component";
 import {AboutModule} from "../../about/about.module";
 import {SharedModule} from "../../../../shared/shared.module";
 import {GalleryModule} from "../../gallery/gallery.module";
-import {VishramAsthalRoutingModule} from "./vishramAsthal-routing.module";
+import {FreezerBoxRoutingModule} from "./freezerBox-routing.module";
 
 @NgModule({
   imports: [
     CommonModule,
-    VishramAsthalRoutingModule,
+    FreezerBoxRoutingModule,
     AboutModule,
     GalleryModule,
     SharedModule,
 
   ],
   exports: [
-    VishramAsthalComponent
+    FreezerBoxComponent
   ],
   declarations: [
-    VishramAsthalComponent
+    FreezerBoxComponent
   ],
   providers: [],
 })
-export class VishramAsthalModule {
+export class FreezerBoxModule {
 }

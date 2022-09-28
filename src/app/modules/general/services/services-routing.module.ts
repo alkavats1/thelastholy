@@ -34,6 +34,21 @@ const routes: Routes = [
     path: 'cremationGroundBooking',
     loadChildren: () => import('./bookSlot/bookSlot.module')
       .then(mod => mod.BookSlotModule)
+  },
+  {
+    path: 'freezerBox',
+    loadChildren: () => import('./freezerBox/freezerBox.module')
+      .then(mod => mod.FreezerBoxModule)
+  },
+  {
+    path: 'asthiVisarjan',
+    loadChildren: () => import('./asthiVisarjan/asthiVisarjan.module')
+      .then(mod => mod.AsthiVisarjanModule)
+  },
+  {
+    path: 'asthiVisarjanHaridwar',
+    loadChildren: () => import('./asthiVisarjanHaridwar/asthiVisarjanHaridwar.module')
+      .then(mod => mod.AsthiVisarjanHaridwarModule)
   }
 ];
 

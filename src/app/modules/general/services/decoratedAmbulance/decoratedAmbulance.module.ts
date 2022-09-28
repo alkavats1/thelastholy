@@ -5,7 +5,6 @@ import {DecoratedAmbulanceRoutingModule,} from './decoratedAmbulance-routing.mod
 import {DecoratedAmbulanceComponent} from "./decoratedAmbulance.component";
 import {GalleryModule} from "../../gallery/gallery.module";
 import {AboutModule} from "../../about/about.module";
-import {HomeModule} from "../../home/home.module";
 import {PackagesModule} from "../../packages/packages.module";
 import {ContactModule} from "../../contact/contact.module";
 import {ReactiveFormsModule} from "@angular/forms";

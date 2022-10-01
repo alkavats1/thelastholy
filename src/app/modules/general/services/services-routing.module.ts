@@ -49,6 +49,31 @@ const routes: Routes = [
     path: 'asthiVisarjanHaridwar',
     loadChildren: () => import('./asthiVisarjanHaridwar/asthiVisarjanHaridwar.module')
       .then(mod => mod.AsthiVisarjanHaridwarModule)
+  },
+  {
+    path: 'pandit-ji-at-cremation',
+    loadChildren: () => import('./pandit-ji-at-cremation/pandit-ji-at-cremation.module')
+      .then(mod => mod.PanditJiAtCremationModule)
+  },
+  {
+    path: 'poojaSamagree',
+    loadChildren: () => import('./poojaSamagree/poojaSamagree.module')
+      .then(mod => mod.PoojaSamagreeModule)
+  },
+  {
+    path: 'flowers',
+    loadChildren: () => import('./flowers/flowers.module')
+      .then(mod => mod.FlowersModule)
+  },
+  {
+    path: 'funeralServices',
+    loadChildren: () => import('./funeralServices/funeralServices.module')
+      .then(mod => mod.FuneralServicesModule)
+  },
+  {
+    path: 'deadBodyTransportation',
+    loadChildren: () => import('./deadBodyTransportation/deadBodyTransportation.module')
+      .then(mod => mod.DeadBodyTransportationModule)
   }
 ];
 

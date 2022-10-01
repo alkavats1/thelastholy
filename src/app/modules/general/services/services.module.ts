@@ -13,6 +13,11 @@ import {AsthiVisarjanModule} from "./asthiVisarjan/asthiVisarjan.module";
 import {DecoratedAmbulanceModule} from "./decoratedAmbulance/decoratedAmbulance.module";
 import {ArthiMatkiModule} from "./arthi_matki/arthiMatki.module";
 import {AsthiVisarjanHaridwarModule} from "./asthiVisarjanHaridwar/asthiVisarjanHaridwar.module";
+import {PanditJiAtCremationModule} from "./pandit-ji-at-cremation/pandit-ji-at-cremation.module";
+import {PoojaSamagreeModule} from "./poojaSamagree/poojaSamagree.module";
+import {FlowersModule} from "./flowers/flowers.module";
+import {FuneralServicesModule} from "./funeralServices/funeralServices.module";
+import {DeadBodyTransportationModule} from "./deadBodyTransportation/deadBodyTransportation.module";
 
 @NgModule({
   imports: [
@@ -27,7 +32,12 @@ import {AsthiVisarjanHaridwarModule} from "./asthiVisarjanHaridwar/asthiVisarjan
     VishramAsthalModule,
     FreezerBoxModule,
     AsthiVisarjanModule,
-    AsthiVisarjanHaridwarModule
+    AsthiVisarjanHaridwarModule,
+    PanditJiAtCremationModule,
+    PoojaSamagreeModule,
+    FlowersModule,
+    FuneralServicesModule,
+    DeadBodyTransportationModule
   ],
   exports: [
     ServicesComponent,

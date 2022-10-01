@@ -9,17 +9,18 @@ import {SupportResponseModel} from "../model/support-response.model";
   providedIn: 'root'
 })
 export class SharedService {
+  baseUrl = 'http://thelastholyjourney.com//api';
 
   constructor(private httpClient: HttpClient) {
   }
 
   submitSupportForm(supportRequest: SupportRequest): Observable<SupportResponseModel> {
-    return this.httpClient.post<SupportResponseModel>('http://localhost:3000/api/form',
+    return this.httpClient.post<SupportResponseModel>(this.baseUrl + '/form',
       supportRequest, AppConstants.requestOptions)
   }
 
   getSupportData(): Observable<SupportResponseModel> {
-    return this.httpClient.get<SupportResponseModel>('http://localhost:3000/api/form',
+    return this.httpClient.get<SupportResponseModel>(this.baseUrl + '/form',
       AppConstants.requestOptions)
   }
 

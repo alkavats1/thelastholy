@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {Router} from "@angular/router";
-import {SupportResponseModel} from "../../../model/support-response.model";
+import {EnquiryResponseModel} from "../../../model/support-response.model";
 import {AppConstants} from "../../../app.constant";
-import {SupportRequest} from "../../../shared/supportForm/support";
 import {SharedService} from "../../../shared/shared.service";
+import {EnquiryRequest} from "../../../shared/enquiryForm/enquiry";
 
 
 @Component({
@@ -15,9 +15,9 @@ import {SharedService} from "../../../shared/shared.service";
 
 export class AdminComponent implements OnInit {
 
-  tableData!: SupportRequest[];
+  tableData!: EnquiryRequest[];
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['name', 'email', 'phone', 'message', 'subject'];
+  displayedColumns: string[] = ['name', 'email', 'phone', 'category','message'];
 
   constructor(private supportService: SharedService, private router: Router) {
   }
@@ -29,7 +29,7 @@ export class AdminComponent implements OnInit {
   }
 
   getData() {
-    this.supportService.getSupportData().subscribe((response: SupportResponseModel) => {
+    this.supportService.getEnquireData().subscribe((response: EnquiryResponseModel) => {
       console.log(response.response);
       this.tableData = response.response;
       this.dataSource.data = this.tableData;

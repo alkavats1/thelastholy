@@ -6,6 +6,8 @@ import {BookSlotComponent} from "./bookSlot.component";
 import {AboutModule} from "../../about/about.module";
 import {PackagesModule} from "../../packages/packages.module";
 import {SharedModule} from "../../../../shared/shared.module";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   imports: [
@@ -13,7 +15,9 @@ import {SharedModule} from "../../../../shared/shared.module";
     BookSlotRoutingModule,
     AboutModule,
     PackagesModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   exports: [
     BookSlotComponent

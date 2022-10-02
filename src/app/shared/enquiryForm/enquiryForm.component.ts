@@ -4,9 +4,9 @@ import {SupportValidationMessages} from "./enquiry-validation-messages";
 import {SupportResponseModel} from "../../model/support-response.model";
 import {Router} from "@angular/router";
 import {AppConstants} from "../../app.constant";
-import {SupportRequest} from "./enquiry";
 import {ToastrService} from "ngx-toastr";
 import {SharedService} from "../shared.service";
+import {EnquiryRequest} from "./enquiry";
 
 @Component({
   selector: 'app-enquiryForm',
@@ -15,14 +15,15 @@ import {SharedService} from "../shared.service";
 })
 export class EnquiryFormComponent {
 
-  supportForm: FormGroup;
+  enquiryForm: FormGroup;
   supportValidationMessages = SupportValidationMessages;
-  supportResponse!: SupportResponseModel;
+  enquireResponse!: SupportResponseModel;
   consoleErrorMessage!: string;
-  @ViewChild(FormGroupDirective, {static: false}) mySupportForm: any;
+  categories: any = ['Hearse Ambulance Service', 'Arthi and Matki Service', 'Asthi Visarjan Services', 'Kafan', 'Freezer Box', 'Chita Asthal Service', 'Vishram Asthal Service', 'Pandit Ji At Crematorium', 'Pooja Samagree', 'Pind-Daan(Online/Offline)', 'Sevadaar for Kandha Dena', 'Flowers', 'Dead Body Transportation'];
+  @ViewChild(FormGroupDirective, {static: false}) myenquiryForm: any;
 
-  constructor(private formBuilder: FormBuilder, private supportService: SharedService, private router: Router, private toaster: ToastrService) {
-    this.supportForm = this.formBuilder.group({
+  constructor(private formBuilder: FormBuilder, private sharedService: SharedService, private router: Router, private toaster: ToastrService) {
+    this.enquiryForm = this.formBuilder.group({
       name: ['', Validators.compose([
         Validators.required,
         Validators.minLength(1),
@@ -41,30 +42,38 @@ export class EnquiryFormComponent {
         Validators.minLength(3),
         Validators.maxLength(254)
       ])],
-      subject: ['', Validators.compose([
+      category: ['', Validators.compose([
         Validators.required,
-        Validators.minLength(3),
-        Validators.maxLength(254)
       ])]
     });
   }
 
+  get category() {
+    return this.enquiryForm.get('category');
+  }
+
+  changeCategory(e: any) {
+    this.category?.setValue(e.target.value, {
+      onlySelf: true,
+    });
+  }
+
   onSubmit() {
-    const supportRequest = new SupportRequest(
-      this.supportForm.value.name,
-      this.supportForm.value.email,
-      this.supportForm.value.phone,
-      this.supportForm.value.message,
-      this.supportForm.value.subject,
+    const enquireRequest = new EnquiryRequest(
+      this.enquiryForm.value.name,
+      this.enquiryForm.value.email,
+      this.enquiryForm.value.phone,
+      this.enquiryForm.value.category,
+      this.enquiryForm.value.message,
     );
-    console.log(supportRequest);
-    console.log(this.supportForm);
-    if (this.supportForm.valid) {
-      this.supportService.submitSupportForm(supportRequest).subscribe((response: SupportResponseModel) => {
-        this.supportResponse = response;
+    console.log(enquireRequest);
+    console.log(this.enquiryForm);
+    if (this.enquiryForm.valid) {
+      this.sharedService.submitEnquireForm(enquireRequest).subscribe((response: SupportResponseModel) => {
+        this.enquireResponse = response;
         console.log(response.response);
         this.toaster.success("Thanks for submitting. We'/'ll contact you soon");
-        this.router.navigate(['/about'])
+        this.router.navigate(['/home'])
         this.resetForm();
       }, (error: Error) => {
         console.error(error.message, AppConstants.errorPopTitle);
@@ -75,6 +84,6 @@ export class EnquiryFormComponent {
   }
 
   resetForm() {
-    this.mySupportForm.resetForm();
+    this.myenquiryForm.resetForm();
   }
 }

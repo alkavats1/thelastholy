@@ -25,16 +25,16 @@
           <td *matCellDef="let element" mat-cell> {{element.phone}} </td>
         </ng-container>
 
+        <!-- Category Column -->
+        <ng-container matColumnDef="category">
+          <th *matHeaderCellDef mat-header-cell> Subject</th>
+          <td *matCellDef="let element" mat-cell> {{element.category}} </td>
+        </ng-container>
+
         <!-- Message Column -->
         <ng-container matColumnDef="message">
           <th *matHeaderCellDef mat-header-cell> Message</th>
           <td *matCellDef="let element" mat-cell> {{element.message}} </td>
-        </ng-container>
-
-        <!-- Subject Column -->
-        <ng-container matColumnDef="subject">
-          <th *matHeaderCellDef mat-header-cell> Subject</th>
-          <td *matCellDef="let element" mat-cell> {{element.subject}} </td>
         </ng-container>
 
         <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>

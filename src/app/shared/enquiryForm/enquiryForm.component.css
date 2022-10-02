@@ -10,7 +10,7 @@
 
 .contact .enquiryForm .error-message {
   display: none;
-  color: #fff;
+  color: red;
   background: #df1529;
   text-align: left;
   padding: 15px;
@@ -83,7 +83,7 @@
 }
 
 .contact .enquiryForm mat-error {
-  color: black;
+  color: #ec2727 ;
 }
 
 .contact .enquiryForm button[type=submit]:hover {

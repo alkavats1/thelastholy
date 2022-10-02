@@ -1,4 +1,4 @@
-export class SupportValidationMessages {
+export class BookSlotValidationMessages {
   static errorMessages = {
     name: [
       {type: 'required', message: 'Name is required'},
@@ -12,12 +12,20 @@ export class SupportValidationMessages {
       {type: 'required', message: 'Number is required'},
       {type: 'pattern', message: 'Please enter a valid email address'},
     ],
-    message: [
-      {type: 'required', message: 'Message is required'},
+    date: [
+      {type: 'required', message: 'Date is required'},
       {type: 'maxlength', message: 'Message must be less than 255 characters and greater then 1 character'},
     ],
-    category: [
-      {type: 'required', message: 'Service is required'},
+    time: [
+      {type: 'required', message: 'Time is required'},
+      {type: 'maxlength', message: 'Message must be less than 255 characters and greater then 1 character'},
+    ],
+    noOfPeople: [
+      {type: 'required', message: 'No. Of People is required'},
+      {type: 'maxlength', message: 'Message must be less than 255 characters and greater then 1 character'},
+    ],
+    message: [
+      {type: 'required', message: 'Message is required'},
       {type: 'maxlength', message: 'Message must be less than 255 characters and greater then 1 character'},
     ]
   };

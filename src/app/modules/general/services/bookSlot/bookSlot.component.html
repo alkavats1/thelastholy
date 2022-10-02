@@ -83,7 +83,7 @@
                   </mat-error>
                 </div>
                 <div class="col-lg-4 col-md-6 form-group"><input class="form-control" formControlName="date" id="date"
-                                                                 placeholder="Date" type="text">
+                                                                 placeholder="Date" type="date">
                   <mat-error *ngFor="let validation of bookSlotValidationMessages.errorMessages.date">
                     <ng-container
                       *ngIf="bookSlotForm.controls['date'].hasError(validation.type) && bookSlotForm.controls['date'].touched"
@@ -93,7 +93,7 @@
                   </mat-error>
                 </div>
                 <div class="col-lg-4 col-md-6 form-group"><input class="form-control" formControlName="time" id="time"
-                                                                 placeholder="Time" type="text">
+                                                                 placeholder="Time" type="time">
                   <mat-error *ngFor="let validation of bookSlotValidationMessages.errorMessages.time">
                     <ng-container
                       *ngIf="bookSlotForm.controls['time'].hasError(validation.type) && bookSlotForm.controls['time'].touched"
@@ -103,7 +103,7 @@
                   </mat-error>
                 </div>
                 <div class="col-lg-4 col-md-6 form-group"><input class="form-control" formControlName="noOfPeople" id="noOfPeople"
-                                                                 placeholder="No. of people" type="text">
+                                                                 placeholder="No. of people" type="number">
                   <mat-error *ngFor="let validation of bookSlotValidationMessages.errorMessages.noOfPeople">
                     <ng-container
                       *ngIf="bookSlotForm.controls['noOfPeople'].hasError(validation.type) && bookSlotForm.controls['noOfPeople'].touched"

@@ -6,7 +6,7 @@ import {AppConstants} from "./app.constant";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'The Last Holy Journey';
 
 
@@ -15,13 +15,13 @@ export class AppComponent implements OnInit{
   }
 
   setPanelGtag() {
-      const gtagPanelScript = document.createElement('script');
-      gtagPanelScript.async = true;
-      gtagPanelScript.src = AppConstants.gtagPanelScriptSrc;
-      document.getElementsByTagName('head')[0].appendChild(gtagPanelScript);
-      const gtagDataLayer = document.createElement('script');
-      gtagDataLayer.innerHTML = AppConstants.gtagPanelDataLayer;
-      document.getElementsByTagName('head')[0].appendChild(gtagDataLayer);
+    const gtagPanelScript = document.createElement('script');
+    gtagPanelScript.async = true;
+    gtagPanelScript.src = AppConstants.gtagPanelScriptSrc;
+    document.getElementsByTagName('head')[0].appendChild(gtagPanelScript);
+    const gtagDataLayer = document.createElement('script');
+    gtagDataLayer.innerHTML = AppConstants.gtagPanelDataLayer;
+    document.getElementsByTagName('head')[0].appendChild(gtagDataLayer);
 
   }
 }

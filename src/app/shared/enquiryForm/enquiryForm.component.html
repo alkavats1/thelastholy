@@ -1,0 +1,79 @@
+<main id="main">
+  <div class="contact" id="contact">
+    <div class="container" data-aos="fade-up">
+      <form (ngSubmit)="onSubmit()" [formGroup]="enquiryForm" class="enquiryForm p-3 p-md-4" method="post"
+            role="form"
+      >
+        <div class="row">
+          <div class="col-xl-6 form-group"><input class="form-control" formControlName="name" id="name"
+                                                  placeholder="Your Name" type="text">
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.name">
+              <ng-container
+                *ngIf="enquiryForm.controls['name'].hasError(validation.type) && enquiryForm.controls['name'].touched"
+                class="error-message">
+                {{validation.message}}
+              </ng-container>
+            </mat-error>
+          </div>
+          <div class="col-xl-6 form-group"><input class="form-control" formControlName="email" id="email"
+                                                  placeholder="Your Email" type="email">
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.email">
+              <ng-container
+                *ngIf="enquiryForm.controls['email'].hasError(validation.type) && enquiryForm.controls['email'].touched"
+                class="error-message">
+                {{validation.message}}
+              </ng-container>
+            </mat-error>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6 form-group"><input class="form-control" formControlName="phone" id="phone"
+                                                  placeholder="Phone" type="number">
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.phone">
+              <ng-container
+                *ngIf="enquiryForm.controls['phone'].hasError(validation.type) && enquiryForm.controls['phone'].touched"
+                class="error-message">
+                {{validation.message}}
+              </ng-container>
+            </mat-error>
+          </div>
+          <div class="col-xl-6 form-group">
+            <select
+              (change)="changeCategory($event)" class="form-control"
+              formControlName="category"
+              style="    height: 48px;
+    border: 2px solid black;
+    border-radius: 9px;"
+            >
+              <option value="">Choose Services</option>
+              <option *ngFor="let category of categories" [ngValue]="category">
+                {{ category }}
+              </option>
+            </select>
+            <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.category">
+              <ng-container
+                *ngIf="enquiryForm.controls['category'].hasError(validation.type) && enquiryForm.controls['category'].touched"
+                class="error-message">
+                {{validation.message}}
+              </ng-container>
+            </mat-error>
+          </div>
+
+        </div>
+        <div class="form-group"><textarea class="form-control" formControlName="message"
+                                          placeholder="Message" rows="5"></textarea>
+          <mat-error *ngFor="let validation of supportValidationMessages.errorMessages.message">
+            <ng-container
+              *ngIf="enquiryForm.controls['message'].hasError(validation.type) && enquiryForm.controls['message'].touched"
+              class="error-message">
+              {{validation.message}}
+            </ng-container>
+          </mat-error>
+        </div>
+        <div class="text-center">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

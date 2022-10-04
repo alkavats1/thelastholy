@@ -1,34 +1,47 @@
-<header id="header" class="header fixed-top d-flex align-items-center">
+<header class="header fixed-top d-flex align-items-center" id="header">
   <div class="container d-flex align-items-center justify-content-between">
-    <a href="/home" class="logo d-flex align-items-center me-auto me-lg-0">
-      <img src="assets/img/logo-2.png">
+    <a class="logo d-flex align-items-center me-auto me-lg-0" href="/home">
+      <img class="img-fluid" src="https://i.postimg.cc/Rq5gsyKr/Screenshot-from-2022-09-20-23-50-57.png">
     </a>
-    <nav id="navbar" class="navbar">
+    <nav class="navbar">
       <ul>
         <li><a href="/home">Home</a></li>
         <li><a href="/about">About</a></li>
-        <li class="dropdown">
-          <a href="/services"><span>Our Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+        <li class="dropdown" href="/services">
+          <a routerLink="/services"><span>Our Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
-            <li><a href="/decoratedAmbulance">DECORATED AMBULANCE</a></li>
-            <li><a href="">ARTHI AND MATKI</a></li>
-            <li><a href="">KAFAN</a></li>
-            <li><a href="">CREMATION GROUND CHARGES</a></li>
-            <li><a href="/bookSlot">CREMATION GROUND SLOT BOOKING ( WOODEN )</a></li>
-            <li><a href="">PANDIT JI AT CREMATORIUM</a></li>
-            <li><a href="">POOJA SAMAGREE</a></li>
-            <li><a href="">END TO END ON GROUND COORDINATION</a></li>
-            <li><a href="">FLOWERS</a></li>
-            <!--<li class="dropdown">
-              <a href=""><span>Funeral ceremony</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li><a href="/decoratedAmbulance">Hearse Ambulance Service</a></li>
+            <li><a href="/arthiMatki">Arthi and Matki Service</a></li>
+            <li class="dropdown" href="/asthiVisarjan">
+              <a routerLink="/asthiVisarjan"><span>Asthi Visarjan Services</span> <i
+                class="bi bi-chevron-right dropdown-indicator"></i></a>
               <ul>
-                <li><a href="">DABC</a></li>
-                <li><a href="">YBN</a></li>
-                <li><a href="">SDE</a></li>
-                <li><a href="">RTY</a></li>
-                <li><a href="">HSD</a></li>
+                <li><a href="/asthiVisarjan">Asthi Visarjan</a></li>
+                <li><a href="/asthiVisarjanHaridwar">Asthi Visarjan in Haridwar</a></li>
               </ul>
-            </li>-->
+            </li>
+            <li><a href="/kafan">Kafan Funeral Service</a></li>
+            <li><a href="/freezerBox">Freezer Box Service</a></li>
+            <li class="dropdown" href="/cremationGroundBooking">
+              <a routerLink="/cremationGroundBooking"><span>Cremation Ground Services</span> <i
+                class="bi bi-chevron-right dropdown-indicator"></i></a>
+              <ul>
+                <li><a href="/chitaAsthal">Chita Asthal Service</a></li>
+                <li><a href="/vishramAsthal">Vishram Asthal Service</a></li>
+              </ul>
+            </li>
+            <li><a href="/pandit-ji-at-cremation">Pandit Ji At Crematorium</a></li>
+            <li><a href="/poojaSamagree">Pooja Samagree</a></li>
+            <li class="dropdown" href="/funeralServices">
+              <a routerLink="/funeralServices"><span>Funeral Services</span> <i
+                class="bi bi-chevron-right dropdown-indicator"></i></a>
+              <ul>
+                <li><a href="/funeralServices">Pind-Daan(Online/Offline)</a></li>
+                <li><a href="/funeralServices">Sevadaar for Kandha Dena</a></li>
+              </ul>
+            </li>
+            <li><a href="/flowers">Flowers</a></li>
+            <li><a href="/deadBodyTransportation">Dead Body Transportation</a></li>
           </ul>
         </li>
         <li><a href="/packages">Packages</a></li>
@@ -36,8 +49,14 @@
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn-book-a-table" href="#book-a-table">Select City</a> <i
-    class="mobile-nav-toggle mobile-nav-show bi bi-list"></i> <i
+    <div class="d-flex">
+      <a class="btn-book-a-table" href="tel:+918512000444">Helpline</a>&nbsp;
+      <span>
+        <button (click)="openDialog()" class="img-fluid" mat-raised-button style="background-color: orange">Quick Enquiry</button>
+      </span>
+    </div>
+    <i
+      class="mobile-nav-toggle mobile-nav-show bi bi-list"></i> <i
     class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
   </div>
 </header>

@@ -1,8 +1,12 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from "./modules/general/home/home.component";
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
   {
     path: 'home',
     loadChildren: () => import('./modules/general/home/home.module')
@@ -17,11 +21,6 @@ const routes: Routes = [
     path: 'services',
     loadChildren: () => import('./modules/general/services/services.module')
       .then(mod => mod.ServicesModule)
-  },
-  {
-    path: 'decoratedAmbulance',
-    loadChildren: () => import('./modules/general/services/decoratedAmbulance/decoratedAmbulance.module')
-      .then(mod => mod.DecoratedAmbulanceModule)
   },
   {
     path: 'packages',
@@ -39,16 +38,10 @@ const routes: Routes = [
       .then(mod => mod.ContactModule)
   },
   {
-    path: 'bookSlot',
-    loadChildren: () => import('./modules/general/bookSlot/bookSlot.module')
-      .then(mod => mod.BookSlotModule)
+    path: 'admin',
+    loadChildren: () => import('./modules/general/admin/admin.module')
+      .then(mod => mod.AdminModule)
   },
-  {
-    path: '**',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  }
-
 ];
 
 @NgModule({

@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 
 import {HeaderRoutingModule} from './header-routing.module';
 import {HeaderComponent} from './header.component';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import {HeaderComponent} from './header.component';
   ],
   imports: [
     CommonModule,
-    HeaderRoutingModule
+    HeaderRoutingModule,
+    MatButtonModule
   ],
   exports: [
     HeaderComponent

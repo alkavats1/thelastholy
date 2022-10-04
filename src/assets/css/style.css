@@ -113,11 +113,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #676775;
@@ -245,7 +245,7 @@ section {
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
-    transition-delay: 0 !important;
+    transition-delay: 0.1ms !important;
   }
 }
 
@@ -274,6 +274,7 @@ section {
 .header .logo img {
   max-height: 40px;
   margin-right: 6px;
+  /*  max-width: 37px;*/
 }
 
 .header .logo h1 {
@@ -312,7 +313,7 @@ section {
 /*--------------------------------------------------------------
 # Desktop Navigation
 --------------------------------------------------------------*/
-@media (min-width: 1280px) {
+@media (min-width: 1000px) {
   .navbar {
     padding: 0;
   }
@@ -329,7 +330,7 @@ section {
     position: relative;
   }
 
-  .navbar>ul>li {
+  .navbar > ul > li {
     white-space: nowrap;
     padding: 10px 0 10px 28px;
   }
@@ -356,7 +357,7 @@ section {
     margin-left: 5px;
   }
 
-  .navbar>ul>li>a:before {
+  .navbar > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -370,7 +371,7 @@ section {
   }
 
   .navbar a:hover:before,
-  .navbar li:hover>a:before,
+  .navbar li:hover > a:before,
   .navbar .active:before {
     visibility: visible;
     width: 100%;
@@ -379,7 +380,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #000;
   }
 
@@ -416,11 +417,11 @@ section {
 
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
+  .navbar .dropdown ul li:hover > a {
     color: var(--color-primary);
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -432,7 +433,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -445,12 +446,12 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1000px) {
 
   .mobile-nav-show,
   .mobile-nav-hide {
@@ -461,7 +462,7 @@ section {
 /*--------------------------------------------------------------
 # Mobile Navigation
 --------------------------------------------------------------*/
-@media (max-width: 1279px) {
+@media (max-width: 999px) {
   .navbar {
     position: fixed;
     top: 0;
@@ -508,7 +509,7 @@ section {
   }
 
   .navbar a:hover,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #000;
   }
 
@@ -528,14 +529,14 @@ section {
     border: 1px solid #eee;
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
   .mobile-nav-show {
     color: var(--color-secondary);
-    font-size: 28px;
+    font-size: 20px;
     cursor: pointer;
     line-height: 0;
     transition: 0.5s;
@@ -570,6 +571,10 @@ section {
     background: rgba(255, 255, 255, 0.8);
     z-index: 9996;
   }
+
+  /* .header .btn-book-a-table{
+     margin-left: 623px;
+   }*/
 }
 
 /*--------------------------------------------------------------
@@ -589,7 +594,6 @@ section {
 .about .call-us {
   left: 10%;
   right: 10%;
-  bottom: 10%;
   background-color: #fff;
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
   padding: 20px;
@@ -652,12 +656,8 @@ section {
   animation-delay: 0s;
   -webkit-animation: pulsate-btn 2s;
   animation: pulsate-btn 2s;
-  -webkit-animation-direction: forwards;
-  animation-direction: forwards;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-timing-function: steps;
-  animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
   border: 5px solid rgba(206, 18, 18, 0.7);
@@ -928,7 +928,6 @@ section {
   font-weight: 500;
   color: var(--color-secondary);
   font-family: var(--font-secondary);
-  font-weight: 30px;
   margin-bottom: 5px;
 }
 
@@ -947,9 +946,9 @@ section {
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials .section-header {
+/*.testimonials .section-header {
   margin-bottom: 40px;
-}
+}*/
 
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
@@ -1037,7 +1036,7 @@ section {
 
 .events .event-item {
   background-size: cover;
-  background-position: cente;
+  background-position: center;
   min-height: 600px;
   padding: 30px;
 }
@@ -1079,7 +1078,7 @@ section {
 }
 
 @media (min-width: 1200px) {
-  .events .swiper-slide-active+.swiper-slide {
+  .events .swiper-slide-active + .swiper-slide {
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 1;
@@ -1126,7 +1125,6 @@ section {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: url(../img/team-shape.svg) no-repeat center bottom;
   background-size: contain;
   z-index: 1;
 }
@@ -1444,7 +1442,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1479,18 +1477,21 @@ section {
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 0;
   box-shadow: none;
   font-size: 14px;
+  border: 2px solid white;
+  border-radius: 9px;
 }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--color-primary);
+  /*border-color: var(--color-primary);*/
 }
 
 .contact .php-email-form input {
   height: 48px;
+  border: 2px solid white;
+  border-radius: 9px;
 }
 
 .contact .php-email-form textarea {
@@ -1558,6 +1559,7 @@ section {
   border-radius: 50px;
   transition: 0.5s;
   color: #fff;
+  visibility: hidden;
   background: var(--color-primary);
   box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
 }

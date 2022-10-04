@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  forntend:
+    container_name: lastholy-FE
+    image: 160698707044.dkr.ecr.ap-south-1.amazonaws.com/lastholy:FElatest
+    ports:
+      - 80:80
+    volumes:
+      - /home/ubuntu/lastholidayweb/nginx/:/etc/nginx

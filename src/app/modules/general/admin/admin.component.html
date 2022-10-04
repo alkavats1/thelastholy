@@ -1,0 +1,52 @@
+<br><br>
+
+<main id="main">
+  <section id="admin">
+    <h1 style="text-align: center">Support Form data</h1>&nbsp;
+    <div class="container">
+      <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th *matHeaderCellDef mat-header-cell> Name</th>
+          <td *matCellDef="let element" mat-cell> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="email">
+          <th *matHeaderCellDef mat-header-cell> Email</th>
+          <td *matCellDef="let element" mat-cell> {{element.email}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="phone">
+          <th *matHeaderCellDef mat-header-cell> Phone</th>
+          <td *matCellDef="let element" mat-cell> {{element.phone}} </td>
+        </ng-container>
+
+        <!-- Category Column -->
+        <ng-container matColumnDef="category">
+          <th *matHeaderCellDef mat-header-cell> Subject</th>
+          <td *matCellDef="let element" mat-cell> {{element.category}} </td>
+        </ng-container>
+
+        <!-- Message Column -->
+        <ng-container matColumnDef="message">
+          <th *matHeaderCellDef mat-header-cell> Message</th>
+          <td *matCellDef="let element" mat-cell> {{element.message}} </td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr *matNoDataRow class="mat-row">
+
+        </tr>
+      </table>
+    </div>
+
+
+  </section>
+</main>

@@ -1,0 +1,16 @@
+<header>
+  <div style="background-color: orange">
+    <h1 class="text-center">Enquiry Form <span> <mat-icon (click)="onNoClick()" style="float: right;">cancel</mat-icon></span>
+    </h1>
+    <p class="text-center">Need Help? <span>Send Us your queries</span></p>
+  </div>
+
+</header>
+<div mat-dialog-content style="overflow: hidden">
+  <app-enquiryForm></app-enquiryForm>
+</div>
+
+<!--<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>-->

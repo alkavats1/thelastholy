@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
 
   tableData!: EnquiryRequest[];
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['name', 'email', 'phone', 'category','message'];
+  displayedColumns: string[] = ['name', 'email', 'phone', 'category', 'message'];
 
   constructor(private supportService: SharedService, private router: Router) {
   }

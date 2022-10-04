@@ -83,7 +83,7 @@
 }
 
 .contact .enquiryForm mat-error {
-  color: #ec2727 ;
+  color: #ec2727;
 }
 
 .contact .enquiryForm button[type=submit]:hover {

@@ -4,9 +4,7 @@ import {SharedService} from "../../../../shared/shared.service";
 import {Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
 import {AppConstants} from "../../../../app.constant";
-import {SupportRequest} from "../../../../shared/supportForm/support";
-import {BookSlotResponseModel, SupportResponseModel} from "../../../../model/support-response.model";
-import {SupportValidationMessages} from "../../../../shared/supportForm/support-validation-messages";
+import {BookSlotResponseModel} from "../../../../model/support-response.model";
 import {BookSlotRequest} from "./bookSlot";
 import {BookSlotValidationMessages} from "./bookSlot-validation-messages";
 
@@ -22,6 +20,7 @@ export class BookSlotComponent {
   bookSlotResponse!: BookSlotResponseModel;
   consoleErrorMessage!: string;
   @ViewChild(FormGroupDirective, {static: false}) mySupportForm: any;
+
   constructor(private formBuilder: FormBuilder, private supportService: SharedService, private router: Router, private toaster: ToastrService) {
     this.bookSlotForm = this.formBuilder.group({
       name: ['', Validators.compose([

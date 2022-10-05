@@ -1,54 +1,177 @@
-<br><br>
+<br><br><br><br>
+<mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)" mat-align-tabs="center">
+  <mat-tab label="Contact Form">
+    <main id="contact">
+      <section id="admin-contact">
+        <h1 style="text-align: center">Contact Form data</h1>&nbsp;
+        <h2 style="text-align: center"><a [routerLink]="['/login']">Logout</a></h2>
 
-<main id="main">
-  <section id="admin">
-    <h1 style="text-align: center">Support Form data</h1>&nbsp;
-    <h2 style="text-align: center"><a [routerLink]="['/login']">Logout</a></h2>
-
-    <div class="container">
-      <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
-
-
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <th *matHeaderCellDef mat-header-cell> Name</th>
-          <td *matCellDef="let element" mat-cell> {{element.name}} </td>
-        </ng-container>
-
-        <!-- Weight Column -->
-        <ng-container matColumnDef="email">
-          <th *matHeaderCellDef mat-header-cell> Email</th>
-          <td *matCellDef="let element" mat-cell> {{element.email}} </td>
-        </ng-container>
-
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="phone">
-          <th *matHeaderCellDef mat-header-cell> Phone</th>
-          <td *matCellDef="let element" mat-cell> {{element.phone}} </td>
-        </ng-container>
-
-        <!-- Category Column -->
-        <ng-container matColumnDef="category">
-          <th *matHeaderCellDef mat-header-cell> Subject</th>
-          <td *matCellDef="let element" mat-cell> {{element.category}} </td>
-        </ng-container>
-
-        <!-- Message Column -->
-        <ng-container matColumnDef="message">
-          <th *matHeaderCellDef mat-header-cell> Message</th>
-          <td *matCellDef="let element" mat-cell> {{element.message}} </td>
-        </ng-container>
-
-        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
-
-        <!-- Row shown when there is no matching data. -->
-        <tr *matNoDataRow class="mat-row">
-
-        </tr>
-      </table>
-    </div>
+        <div class="container">
+          <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
 
 
-  </section>
-</main>
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th *matHeaderCellDef mat-header-cell> Name</th>
+              <td *matCellDef="let element" mat-cell> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="email">
+              <th *matHeaderCellDef mat-header-cell> Email</th>
+              <td *matCellDef="let element" mat-cell> {{element.email}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="phone">
+              <th *matHeaderCellDef mat-header-cell> Phone</th>
+              <td *matCellDef="let element" mat-cell> {{element.phone}} </td>
+            </ng-container>
+
+            <!-- No. of People Column -->
+            <ng-container matColumnDef="subject">
+              <th *matHeaderCellDef mat-header-cell> Subject</th>
+              <td *matCellDef="let element" mat-cell> {{element.subject}} </td>
+            </ng-container>
+
+            <!-- Message Column -->
+            <ng-container matColumnDef="message">
+              <th *matHeaderCellDef mat-header-cell> Message</th>
+              <td *matCellDef="let element" mat-cell> {{element.message}} </td>
+            </ng-container>
+
+            <tr *matHeaderRowDef="contactColumns" mat-header-row></tr>
+            <tr *matRowDef="let row; columns: contactColumns;" mat-row></tr>
+
+            <!-- Row shown when there is no matching data. -->
+            <tr *matNoDataRow class="mat-row">
+
+            </tr>
+          </table>
+        </div>
+
+
+      </section>
+    </main>
+  </mat-tab>
+  <mat-tab label="Enquiry Form">
+    <main id="enquiry">
+      <section id="admin-enquiry">
+        <h1 style="text-align: center">Enquiry Form data</h1>&nbsp;
+        <h2 style="text-align: center"><a [routerLink]="['/login']">Logout</a></h2>
+
+        <div class="container">
+          <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th *matHeaderCellDef mat-header-cell> Name</th>
+              <td *matCellDef="let element" mat-cell> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="email">
+              <th *matHeaderCellDef mat-header-cell> Email</th>
+              <td *matCellDef="let element" mat-cell> {{element.email}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="phone">
+              <th *matHeaderCellDef mat-header-cell> Phone</th>
+              <td *matCellDef="let element" mat-cell> {{element.phone}} </td>
+            </ng-container>
+
+            <!-- Date Column -->
+            <ng-container matColumnDef="category">
+              <th *matHeaderCellDef mat-header-cell> Category</th>
+              <td *matCellDef="let element" mat-cell> {{element.category}} </td>
+            </ng-container>
+
+            <!-- Message Column -->
+            <ng-container matColumnDef="message">
+              <th *matHeaderCellDef mat-header-cell> Message</th>
+              <td *matCellDef="let element" mat-cell> {{element.message}} </td>
+            </ng-container>
+
+            <tr *matHeaderRowDef="enquiryColumns" mat-header-row></tr>
+            <tr *matRowDef="let row; columns: enquiryColumns;" mat-row></tr>
+
+            <!-- Row shown when there is no matching data. -->
+            <tr *matNoDataRow class="mat-row">
+
+            </tr>
+          </table>
+        </div>
+
+
+      </section>
+    </main>
+  </mat-tab>
+  <mat-tab label="Slot Book">
+    <main id="slotBook">
+      <section id="admin-slot">
+        <h1 style="text-align: center">Slot Book Form data</h1>&nbsp;
+        <h2 style="text-align: center"><a [routerLink]="['/login']">Logout</a></h2>
+
+        <div class="container">
+          <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th *matHeaderCellDef mat-header-cell> Name</th>
+              <td *matCellDef="let element" mat-cell> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="email">
+              <th *matHeaderCellDef mat-header-cell> Email</th>
+              <td *matCellDef="let element" mat-cell> {{element.email}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="phone">
+              <th *matHeaderCellDef mat-header-cell> Phone</th>
+              <td *matCellDef="let element" mat-cell> {{element.phone}} </td>
+            </ng-container>
+
+            <!-- Date Column -->
+            <ng-container matColumnDef="date">
+              <th *matHeaderCellDef mat-header-cell> Date</th>
+              <td *matCellDef="let element" mat-cell> {{element.date}} </td>
+            </ng-container>
+
+            <!-- Time Column -->
+            <ng-container matColumnDef="time">
+              <th *matHeaderCellDef mat-header-cell> Time</th>
+              <td *matCellDef="let element" mat-cell> {{element.time}} </td>
+            </ng-container>
+
+            <!-- No. of People Column -->
+            <ng-container matColumnDef="noOfPeople">
+              <th *matHeaderCellDef mat-header-cell> No. of People</th>
+              <td *matCellDef="let element" mat-cell> {{element.noOfPeople}} </td>
+            </ng-container>
+
+            <!-- Message Column -->
+            <ng-container matColumnDef="message">
+              <th *matHeaderCellDef mat-header-cell> Message</th>
+              <td *matCellDef="let element" mat-cell> {{element.message}} </td>
+            </ng-container>
+
+            <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+            <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+
+            <!-- Row shown when there is no matching data. -->
+            <tr *matNoDataRow class="mat-row">
+
+            </tr>
+          </table>
+        </div>
+
+
+      </section>
+    </main>
+  </mat-tab>
+</mat-tab-group>

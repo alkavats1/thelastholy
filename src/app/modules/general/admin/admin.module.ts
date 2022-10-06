@@ -6,6 +6,7 @@ import {AdminRoutingModule} from './admin-routing.module';
 import {MatTableModule} from "@angular/material/table";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     AdminRoutingModule,
     MatTableModule,
     MatFormFieldModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonModule
   ],
   exports: [
     AdminComponent

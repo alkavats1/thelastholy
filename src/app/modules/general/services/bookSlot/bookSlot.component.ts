@@ -7,6 +7,7 @@ import {AppConstants} from "../../../../app.constant";
 import {BookSlotResponseModel} from "../../../../model/support-response.model";
 import {BookSlotRequest} from "./bookSlot";
 import {BookSlotValidationMessages} from "./bookSlot-validation-messages";
+import {SeoService} from "../../../../_services/seo.service";
 
 @Component({
   selector: 'app-bookSlot',
@@ -21,7 +22,13 @@ export class BookSlotComponent {
   consoleErrorMessage!: string;
   @ViewChild(FormGroupDirective, {static: false}) mySupportForm: any;
 
-  constructor(private formBuilder: FormBuilder, private supportService: SharedService, private router: Router, private toaster: ToastrService) {
+  constructor(private seoService: SeoService, private formBuilder: FormBuilder, private supportService: SharedService, private router: Router, private toaster: ToastrService) {
+
+    const content = 'The Last Holy Journey - The Last Holy Journey is the funeral website which helps you to offer all the funeral services at one place. We offer serval packages also, so that you don\'t have to worry. Our end-to-end funeral services allow families to mourn in peace. - Contact Page';
+    const title = 'The Last Holy Journey - Services Page - Cremation Services';
+
+    this.seoService.setMetaDescription(content);
+    this.seoService.setMetaTitle(title);
     this.bookSlotForm = this.formBuilder.group({
       name: ['', Validators.compose([
         Validators.required,

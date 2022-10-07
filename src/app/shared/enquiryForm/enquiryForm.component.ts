@@ -73,7 +73,7 @@ export class EnquiryFormComponent {
         this.enquireResponse = response;
         console.log(response.response);
         this.toaster.success("Thanks for submitting. We'/'ll contact you soon");
-        this.router.navigate(['/home'])
+        this.router.navigate(['/'])
         this.resetForm();
       }, (error: Error) => {
         console.error(error.message, AppConstants.errorPopTitle);

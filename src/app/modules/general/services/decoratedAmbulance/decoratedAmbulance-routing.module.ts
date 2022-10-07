@@ -7,7 +7,7 @@ const routes: Routes = [
   {path: '', component: DecoratedAmbulanceComponent, pathMatch: "full"},
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/',
   }
 ];
 

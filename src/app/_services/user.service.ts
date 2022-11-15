@@ -12,6 +12,6 @@ export class UserService {
 
   // get all the users details from the backend
   getAll() {
-    return this.http.get<User[]>(`http://lastholy-BE/users`);
+    return this.http.get<User[]>(`http://localhost/users`);
   }
 }

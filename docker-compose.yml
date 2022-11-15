@@ -13,7 +13,7 @@ services:
       - /mnt1/tmp:/tmp
       - /mnt1/logs/lastholy:/app/logs
     networks:
-      - thelastholy-network
+      - thelastholy
 
   forntend:
     container_name: lastholy-FE
@@ -24,5 +24,5 @@ services:
     volumes:
       - /home/ubuntu/lastholidayweb/nginx/:/etc/nginx
     networks:
-      - thelastholy-network
+      - thelastholy
 

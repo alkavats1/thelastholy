@@ -11,7 +11,7 @@ import {BookSlotRequest} from "../modules/general/services/bookSlot/bookSlot";
   providedIn: 'root'
 })
 export class SharedService {
-  baseUrl = 'http://lastholy-be:3000/api';
+  baseUrl = 'http://thelastholyjourney.com:3000/api';
 
   constructor(private httpClient: HttpClient) {
   }

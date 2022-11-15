@@ -1,16 +1,16 @@
 version: '3.3'
 services:
-  # backend:
-  #   container_name: lastholy-BE
-  #   image: 160698707044.dkr.ecr.ap-south-1.amazonaws.com/lastholy:BElatest
-  #   restart: always
-  #   volumes:
-  #     - /mnt1/tmp:/tmp
-  #     - /mnt1/logs/lastholy:/app/logs
+  backend:
+    container_name: lastholy-BE
+    image: 160698707044.dkr.ecr.ap-south-1.amazonaws.com/lastholy:BElatest
+    restart: always
+    volumes:
+      - /mnt1/tmp:/tmp
+      - /mnt1/logs/lastholy:/app/logs
 
   forntend:
     container_name: lastholy-FE
-    # depends_on: backend
+    depends_on: [backend]
     image: 160698707044.dkr.ecr.ap-south-1.amazonaws.com/lastholy:FElatest
     ports:
       - 80:80

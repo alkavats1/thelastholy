@@ -1,4 +1,9 @@
 version: '3.3'
+
+networks:
+  thelastholy:
+    driver: bridge
+
 services:
   backend:
     container_name: lastholy-BE
@@ -20,10 +25,4 @@ services:
       - /home/ubuntu/lastholidayweb/nginx/:/etc/nginx
     networks:
       - thelastholy-network
-
-networks:
-  thelastholy:
-    driver: bridge
-
-  
 

@@ -2,7 +2,7 @@ version: '3.3'
 services:
   backend:
     container_name: lastholy-BE
-    image: 160698707044.dkr.ecr.ap-south-1.amazonaws.com/lastholy:BElatest
+    image: 160698707044.dkr.ecr.ap-south-1.amazonaws.com/lastholy-be:BElatest
     restart: always
     volumes:
       - /mnt1/tmp:/tmp

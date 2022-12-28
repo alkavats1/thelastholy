@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {SeoService} from "../../../_services/seo.service";
 
 
 @Component({
@@ -9,7 +10,12 @@ import {Component, OnInit} from '@angular/core';
 export class AboutComponent implements OnInit {
 
 
-  constructor() {
+  constructor(private seoService: SeoService) {
+    const content = 'The Last Holy Journey is the funeral website which helps you to offer all the funeral services at one place. We offer serval packages also, so that you don\'t have to worry. Our end-to-end funeral services allow families to mourn in peace.';
+    const title = 'The Last Holy Journey - About Page';
+
+    this.seoService.setMetaDescription(content);
+    this.seoService.setMetaTitle(title);
   }
 
   ngOnInit(): void {

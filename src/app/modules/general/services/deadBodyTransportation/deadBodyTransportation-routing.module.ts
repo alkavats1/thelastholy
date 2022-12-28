@@ -7,7 +7,7 @@ const routes: Routes = [
   {path: '', component: DeadBodyTransportationComponent, pathMatch: "full"},
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/',
   }
 ];
 

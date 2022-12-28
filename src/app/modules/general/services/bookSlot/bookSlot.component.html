@@ -18,11 +18,12 @@
               assure the hassle-free and smooth offerings on time.
             </li>
           </ul>
-          <h2> <em>We have Two major service for the Creamation Ground. Click on the below links to have a look on them:</em></h2><br>
+          <h2><em>We have Two major service for the Creamation Ground. Click on the below links to have a look on
+            them:</em></h2><br>
           <a href="/chitaAsthal"><h4 style="color: #ce1212"><b>1. <u> Chita Asthal Services</u></b></h4></a>
           <a href="/visharmAsthal"><h4 style="color: darkgreen"><b>2. <u> Vishram Asthal Services</u></b></h4></a><br>
           <ul><h2>Process of Conducting Cremation at Shamshan Ghat, Ghazipur Ground:</h2></ul>
-          <li> Step 1) Call <a a href="tel:+918512000444">+918512000444</a> to book a slot at the Shamshan Ghat,
+          <li> Step 1) Call <a a href="tel:+918595906309">+918595906309</a> to book a slot at the Shamshan Ghat,
             Ghazipur
           </li>
           <li> Step 2) Book for transportation of the deceased, Sntim Sanskar Samagri, wooden logs, and pandit
@@ -83,7 +84,7 @@
                   </mat-error>
                 </div>
                 <div class="col-lg-4 col-md-6 form-group"><input class="form-control" formControlName="date" id="date"
-                                                                 placeholder="Date" type="text">
+                                                                 placeholder="Date" type="date">
                   <mat-error *ngFor="let validation of bookSlotValidationMessages.errorMessages.date">
                     <ng-container
                       *ngIf="bookSlotForm.controls['date'].hasError(validation.type) && bookSlotForm.controls['date'].touched"
@@ -93,7 +94,7 @@
                   </mat-error>
                 </div>
                 <div class="col-lg-4 col-md-6 form-group"><input class="form-control" formControlName="time" id="time"
-                                                                 placeholder="Time" type="text">
+                                                                 placeholder="Time" type="time">
                   <mat-error *ngFor="let validation of bookSlotValidationMessages.errorMessages.time">
                     <ng-container
                       *ngIf="bookSlotForm.controls['time'].hasError(validation.type) && bookSlotForm.controls['time'].touched"
@@ -102,8 +103,9 @@
                     </ng-container>
                   </mat-error>
                 </div>
-                <div class="col-lg-4 col-md-6 form-group"><input class="form-control" formControlName="noOfPeople" id="noOfPeople"
-                                                                 placeholder="No. of people" type="text">
+                <div class="col-lg-4 col-md-6 form-group"><input class="form-control" formControlName="noOfPeople"
+                                                                 id="noOfPeople"
+                                                                 placeholder="No. of people" type="number">
                   <mat-error *ngFor="let validation of bookSlotValidationMessages.errorMessages.noOfPeople">
                     <ng-container
                       *ngIf="bookSlotForm.controls['noOfPeople'].hasError(validation.type) && bookSlotForm.controls['noOfPeople'].touched"
@@ -114,7 +116,7 @@
                 </div>
               </div>
               <div class="form-group mt-3"><textarea class="form-control" formControlName="message"
-                                                placeholder="Message" rows="5"></textarea>
+                                                     placeholder="Message" rows="5"></textarea>
                 <mat-error *ngFor="let validation of bookSlotValidationMessages.errorMessages.message">
                   <ng-container
                     *ngIf="bookSlotForm.controls['message'].hasError(validation.type) && bookSlotForm.controls['message'].touched"

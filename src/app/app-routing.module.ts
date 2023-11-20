@@ -1,10 +1,13 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {AuthGuard} from "./_guards/auth.guard";
+import {LoginComponent} from "./login/login.component";
+
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/',
     pathMatch: 'full'
   },
   {
@@ -40,8 +43,10 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./modules/general/admin/admin.module')
-      .then(mod => mod.AdminModule)
+      .then(mod => mod.AdminModule),
+    canActivate: [AuthGuard]
   },
+  {path: 'login', component: LoginComponent},
 ];
 
 @NgModule({

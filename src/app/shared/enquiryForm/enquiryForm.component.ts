@@ -19,7 +19,7 @@ export class EnquiryFormComponent {
   supportValidationMessages = SupportValidationMessages;
   enquireResponse!: SupportResponseModel;
   consoleErrorMessage!: string;
-  categories: any = ['Hearse Ambulance Service', 'Arthi and Matki Service', 'Asthi Visarjan Services', 'Kafan', 'Freezer Box', 'Chita Asthal Service', 'Vishram Asthal Service', 'Pandit Ji At Crematorium', 'Pooja Samagree', 'Pind-Daan(Online/Offline)', 'Sevadaar for Kandha Dena', 'Flowers', 'Dead Body Transportation'];
+  categories: any = ['Hearse Ambulance Service', 'Arthi and Matki Service', 'Asthi Visarjan Services', 'Kafan', 'Freezer Box', 'Chita Asthal Service', 'Vishram Asthal Service', 'Pandit Ji At Crematorium', 'Pooja Samagree', 'Pind-Daan(Online/Offline)', 'Sevadaar for Kandha Dena', 'Flowers', 'Dead Body Transportation', 'Others'];
   @ViewChild(FormGroupDirective, {static: false}) myenquiryForm: any;
 
   constructor(private formBuilder: FormBuilder, private sharedService: SharedService, private router: Router, private toaster: ToastrService) {
@@ -73,7 +73,7 @@ export class EnquiryFormComponent {
         this.enquireResponse = response;
         console.log(response.response);
         this.toaster.success("Thanks for submitting. We'/'ll contact you soon");
-        this.router.navigate(['/home'])
+        this.router.navigate(['/'])
         this.resetForm();
       }, (error: Error) => {
         console.error(error.message, AppConstants.errorPopTitle);

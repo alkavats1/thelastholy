@@ -67,6 +67,19 @@ export class AppConstants {
     withCredentials: true
   };
 
+  /**
+   * Google tag manager constants
+   */
+  public static readonly gtagPanelScriptSrc = 'https://www.googletagmanager.com/gtag/js?id=G-8ELT8BL4PF';
+  public static readonly gtagPanelDataLayer = 'window.dataLayer = window.dataLayer || [];\n' +
+    '\n' +
+    '        function gtag() {\n' +
+    '            dataLayer.push(arguments);\n' +
+    '        }\n' +
+    '\n' +
+    '        gtag(\'js\', new Date());\n' +
+    '\n' +
+    '        gtag(\'config\', \'G-8ELT8BL4PF\');';
 
   public static readonly usa = 'US';
   public static readonly addressComponents = 'address_components';
